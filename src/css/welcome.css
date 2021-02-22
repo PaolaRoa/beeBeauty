@@ -7,6 +7,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Lato', sans-serif;
+    color: rgb(12, 12, 12);
 }
 body:before {
 	content:'';
@@ -34,12 +35,14 @@ h2{
     margin-top: 10vh;
 }
 .actionBtn{
-    background-color: #eca531;
+    background-color: #ff8800;
+    color: white;
     border:none;
     padding: 10px;
     font-size: 18px;
     margin-top: 5vh;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.452);
     outline: none;
+    font-weight: 700;
 }
