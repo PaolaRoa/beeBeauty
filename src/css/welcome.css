@@ -65,7 +65,12 @@ h2{
 footer{
     position:absolute ;
 }
-.back{
-    float: left;
-    width: 30px;
+.backBtn{
+    background-color:transparent;
+    border: none;
+
+}
+.cartTitle{
+    display: grid;
+    grid-template-columns: 10% 80%;
 }

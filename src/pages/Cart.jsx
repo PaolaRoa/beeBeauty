@@ -14,9 +14,15 @@ const Cart = () => {
     return ( 
         <>
             <Header />
-            <Link to='/home'>
-                <img src={back} alt="" className="rrss"/>
-            </Link>
+            <div className='cartTitle'>
+                <Link to='/home'>
+                    <button className= 'backBtn'>
+                        <img src={back} alt="" className="rrss"/>
+                    </button>                
+                </Link>
+                <h3>Pedido</h3>
+            </div>
+          
             <Footer link= '/wa' domi= "2000" total= "33.000" buttonValue='finalizar'/>
         </>
      );
