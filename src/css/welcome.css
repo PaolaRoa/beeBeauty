@@ -34,7 +34,10 @@ header{
 
 }
 .logoSmall{
-    width: 50px;
+    width: 60px;
+}
+.rrss{
+    width: 30px;
 }
 h2{
     margin-top: 10vh;
