@@ -62,3 +62,10 @@ h2{
     outline: none;
     font-weight: 700;
 }
+footer{
+    position:absolute ;
+}
+.back{
+    float: left;
+    width: 30px;
+}
