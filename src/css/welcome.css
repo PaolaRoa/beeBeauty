@@ -16,10 +16,12 @@ body:before {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: #ffffff9d;
+	background-color: #ffffffaf;
     z-index: -5;
 }
-
+header{
+    background-color: white;
+}
 .container{
   margin: 5%;
 }
@@ -30,6 +32,9 @@ body:before {
     position: relative;
     width: 200px;
 
+}
+.logoSmall{
+    width: 50px;
 }
 h2{
     margin-top: 10vh;
