@@ -1,0 +1,37 @@
+body{
+    background-image: url(https://cdn.pixabay.com/photo/2020/06/29/18/51/honey-5353837_960_720.jpg);
+    text-align: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #ffffff71;
+    z-index: -5;
+}
+
+.container{
+  margin: 5%;
+}
+.logo{
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 50%;
+    position: relative;
+    width: 200px;
+
+}
+h2{
+    margin-top: 10vh;
+}
+.actionBtn{
+    background-color: yellow;
+    border:none;
+    padding: 5px;
+}
