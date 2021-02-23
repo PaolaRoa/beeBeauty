@@ -92,3 +92,34 @@
     font-weight: 700;
 
 }
+
+@media(min-width:500px){
+    .cardContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        width: 100vw;
+        overflow-x: hidden;
+
+    }
+    .card{
+        width: 400px;
+    }
+    .pimg{
+        height: 150px;
+    }
+    .pName{
+        justify-self: flex-end;
+    }
+    .pName > h3{
+        font-family: 'Federo', sans-serif;
+        font-size: 24px;
+        margin: 15px 3px auto 3px;
+    }
+    .pDescription > p{
+        font-size: 14px;
+        margin: 0 20px 0px 20px;
+        text-align: left;
+    }
+}
