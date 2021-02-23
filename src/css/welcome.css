@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Federo&display=swap');
 body{
     background-image: url(https://cdn.pixabay.com/photo/2020/06/29/18/51/honey-5353837_960_720.jpg);
     text-align: center;
@@ -19,6 +19,9 @@ body:before {
 	background-color: #ffffffaf;
     z-index: -5;
 }
+h1{
+    font-family: 'Federo', sans-serif;
+}
 header{
     background-color: white;
     display: flex;
@@ -36,7 +39,8 @@ header > div{
 }
 header > h1{
     color: orange;
-    font-size: 20px;
+    font-size: 24px;
+    font-family: 'Federo', sans-serif;
 }
 
 .container{
