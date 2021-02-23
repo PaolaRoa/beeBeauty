@@ -8,12 +8,14 @@ import {
     Route,
     Link
   } from "react-router-dom";
+import Card from '../components/Card';
 
 
 const Home = () => {
     return ( 
         <>
             <Header title='Inicio' btn=''/>
+            <Card />
             <Footer goto='/cart' total= "33.000" buttonValue='ver carrito'/>
         </>
      );
