@@ -1,5 +1,5 @@
 .cardContainer{
-    height: 80vh;
+    height: 65vh;
     overflow-y: scroll;
 }
 .card {
@@ -26,13 +26,21 @@
     margin: 5px;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
-.pName{ grid-area: 1 / 2 / 2 / 4; }
+.pName{ 
+    grid-area: 1 / 2 / 2 / 4;
+    display: inline-flex;    
+}
 .pName > h3{
     font-family: 'Federo', sans-serif;
     font-size: 14px;
     margin: 15px 3px auto 3px;
-
-
+}
+.pName > button{
+    color: red;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    align-self: self-start;
 }
 .pDescription { grid-area: 2 / 2 / 3 / 4; }
 .pDescription > p{

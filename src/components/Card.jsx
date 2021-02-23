@@ -5,25 +5,25 @@ import '../css/card.css'
 
 const Card = () => {
     return ( 
-        <div className="card">  
-            <div class="photo">
+        <div className="card">
+            <div className="photo">
                 <img src={pSample} alt="product" className='pimg'/>
             </div>
-            <div class="pName">
-                <h3>paleta Tokio de Miis Cosmetics</h3>
+            <div className="pName">
+                <h3>paleta Tokio de Miis Cosmetics</h3><button>X</button>
             </div>
-            <div class="pDescription">
+            <div className="pDescription">
                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
             </div>
-            <div class="pCost"> 
+            <div className="pCost"> 
                 <h4>$40.000</h4>
             </div>
-            <div class="pAdd">
+            <div className="pAdd">
                 <button>-</button>
                 <p>1</p>
                 <button>+</button>
             </div>
-            <div class="btnAdd">
+            <div className="btnAdd">
                 <button className= 'smallBtn'>Agregar</button>
             </div>
         </div>

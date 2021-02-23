@@ -1,0 +1,26 @@
+.catContainer{
+    overflow-y: scroll;
+}
+ #cat{
+    margin: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #313131;
+}
+.catContainer > ul > li > button{
+    background-color: #f0c600;
+    color: white;
+    padding: 5px;
+    border-radius:20px;
+    border: none;
+    outline: none;
+}
+ul{
+    list-style: none;
+    display: inline-flex;
+    margin: 3px 0px 3px 0px;
+    /* box-shadow: 0px 0px  3px rgba(0, 0, 0, 0.2); */
+}
+li{
+    margin: 0 10px 0 10px;
+}
