@@ -104,7 +104,10 @@
 
     }
     .card{
+        padding: 15px;
         width: 400px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
     .pimg{
         height: 150px;
