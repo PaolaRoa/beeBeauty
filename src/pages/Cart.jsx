@@ -11,18 +11,17 @@ import {
 
 
 const Cart = () => {
+
+    const btn = 
+        <Link to='/home'>
+            <button className= 'backBtn'>
+                <img src={back} alt="" className="rrss"/>
+            </button>                
+        </Link>
+
     return ( 
         <>
-            <Header title='Carrito'/>
-            <div className='cartTitle'>
-                <Link to='/home'>
-                    <button className= 'backBtn'>
-                        <img src={back} alt="" className="rrss"/>
-                    </button>                
-                </Link>
-                <h3>Pedido</h3>
-            </div>
-          
+            <Header title='Carrito' btn={btn}/>
             <Footer link= '/wa' domi= "2000" total= "33.000" buttonValue='finalizar'/>
         </>
      );

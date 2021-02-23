@@ -9,8 +9,13 @@ const Header = (props) => {
     return ( 
         <header>
             <img src={bb} alt="logo beeBeauty" className="logoSmall"/>
+            
+           
             <h1>
-               {props.title}
+           
+            {props.title}
+            <br/>
+            {props.btn}
             </h1>
            
             <div>
@@ -26,7 +31,7 @@ const Header = (props) => {
                 </a>
 
             </div>
-
+            
         </header>
      );
 }
