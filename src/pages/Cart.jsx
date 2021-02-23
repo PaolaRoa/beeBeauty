@@ -22,7 +22,7 @@ const Cart = () => {
     return ( 
         <>
             <Header title='Carrito' btn={btn}/>
-            <Footer link= '/wa' domi= "2000" total= "33.000" buttonValue='finalizar'/>
+            <Footer link= '/wa' domi= "Domicilio: $2000" total= "33.000" buttonValue='finalizar'/>
         </>
      );
 }

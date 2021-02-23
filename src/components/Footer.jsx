@@ -11,7 +11,7 @@ const Footer = (props) => {
         <footer>
             <div>
                 <p>{props.domi}</p>
-                <h3>{props.total}</h3>
+                <h3>Total: ${props.total}</h3>
             </div>
             <Link to={props.goto}>
                 <button className= 'actionBtn'>{props.buttonValue}</button>
