@@ -10,7 +10,7 @@ const Footer = (props) => {
     return (
         <footer>
             <div>
-                <p>{props.domi}</p>
+                <p>{props.delivery}</p>
                 <h3>Total: ${props.total}</h3>
             </div>
             <Link to={props.goto}>
