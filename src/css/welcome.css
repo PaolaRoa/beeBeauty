@@ -105,3 +105,6 @@ footer > div > p{
     display: grid;
     grid-template-columns: 10% 80%;
 }
+btnIcon{
+    width: 15px;
+}

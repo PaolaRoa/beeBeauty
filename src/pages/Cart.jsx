@@ -8,6 +8,7 @@ import {
     Route,
     Link
   } from "react-router-dom";
+  import waW from '../images/wawhite.png'
 
 
 const Cart = () => {
@@ -18,11 +19,11 @@ const Cart = () => {
                 <img src={back} alt="" className="rrss"/>
             </button>                
         </Link>
-
+    const btnWa = <p>finalizar</p>
     return ( 
         <>
             <Header title='Carrito' btn={btn}/>
-            <Footer link= '/wa' domi= "Domicilio: $2000" total= "33.000" buttonValue='finalizar'/>
+            <Footer link= '/wa' domi= "Domicilio: $2000" total= "33.000" buttonValue ='finalizar'/>
         </>
      );
 }
