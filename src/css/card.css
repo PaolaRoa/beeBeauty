@@ -1,3 +1,7 @@
+.cardContainer{
+    height: 80vh;
+    overflow-y: scroll;
+}
 .card {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -12,17 +16,21 @@
     
 .photo { 
     grid-area: 1 / 1 / 3 / 2;
+    filter: drop-shadow(0 0 3px #f1a347);
+
     }
 .pimg{
-    border-radius: 50%;
-    width: 20vw;
-    height: 20vw;
+    /* border-radius: 50%; */
+    /* width: 25vw; */
+    height: 25vw;
     margin: 5px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 .pName{ grid-area: 1 / 2 / 2 / 4; }
 .pName > h3{
     font-family: 'Federo', sans-serif;
     font-size: 14px;
+    margin: 15px 3px auto 3px;
 
 
 }
@@ -41,7 +49,7 @@
     display: flex;
     align-items: self-end;
     justify-content: space-evenly;
-    background-color: #fce263;
+    background-color: #f0c600;
     margin: 0;
     padding: 0;
     width: fit-content;
@@ -52,6 +60,14 @@
 .pAdd > p{
     margin: 0 5px 0 5px;
     color:#313131;
+    font-family: 'Federo', sans-serif;
+
+
+}
+.pAdd > button{
+    background-color: transparent;
+    outline: none;
+    border: none;
 }
 .btnAdd { grid-area: 3 / 3 / 4 / 4; }
 

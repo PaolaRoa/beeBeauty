@@ -9,13 +9,14 @@ import {
     Link
   } from "react-router-dom";
 import Card from '../components/Card';
+import CardContainer from '../components/CardContainer';
 
 
 const Home = () => {
     return ( 
         <>
             <Header title='Inicio' btn=''/>
-            <Card />
+            <CardContainer />
             <Footer goto='/cart' total= "33.000" buttonValue='ver carrito'/>
         </>
      );
