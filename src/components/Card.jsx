@@ -1,5 +1,6 @@
 import React from 'react';
 import pSample from '../images/productSample.png';
+import '../css/card.css'
 
 
 const Card = () => {
@@ -14,10 +15,16 @@ const Card = () => {
             <div class="pDescription">
                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
             </div>
-            <div class="pCost"> asdfasdf</div>
-            <div class="pAdd"> asdfasdf</div>
+            <div class="pCost"> 
+                <h4>$40.000</h4>
+            </div>
+            <div class="pAdd">
+                <button>-</button>
+                <p>1</p>
+                <button>+</button>
+            </div>
             <div class="btnAdd">
-                <button>Agregar</button>
+                <button className= 'smallBtn'>Agregar</button>
             </div>
         </div>
      );
