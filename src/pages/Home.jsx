@@ -13,7 +13,7 @@ import {
 const Home = () => {
     return ( 
         <>
-            <Header />
+            <Header title='Inicio'/>
             <Footer goto='/cart' total= "33.000" buttonValue='ver carrito'/>
         </>
      );

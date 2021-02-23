@@ -5,10 +5,13 @@ import bb from '../images/beeLogo.png';
 import fb from '../images/fb.png';
 
 
-const Header = () => {
+const Header = (props) => {
     return ( 
         <header>
             <img src={bb} alt="logo beeBeauty" className="logoSmall"/>
+            <h1>
+               {props.title}
+            </h1>
            
             <div>
 

@@ -22,11 +22,21 @@ body:before {
 header{
     background-color: white;
     display: grid;
-    grid-template-columns:60% 40%;
+    grid-template-columns:20% 50% 30%;
     padding: 10px;
     padding-bottom: 20px;
     border-radius: 0px 1px 30px 30px;
     box-shadow: 0px 5px 5px rgba(14, 14, 14, 0.527);
+    align-items: center;
+}
+header > div{
+    display: flex;
+    flex-wrap: nowrap;
+}
+header > h1{
+    color: orange;
+    font-size: 20px;
+    margin-left: 25px;
 }
 
 .container{
@@ -44,8 +54,8 @@ header{
     width: 80px;
 }
 .rrss{
-    width: 30px;
-    margin: 10px;
+    width: 20px;
+    margin: 5px;
 }
 h2{
     margin-top: 10vh;

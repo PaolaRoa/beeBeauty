@@ -13,7 +13,7 @@ import {
 const Cart = () => {
     return ( 
         <>
-            <Header />
+            <Header title='Carrito'/>
             <div className='cartTitle'>
                 <Link to='/home'>
                     <button className= 'backBtn'>
