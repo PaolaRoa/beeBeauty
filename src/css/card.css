@@ -46,7 +46,7 @@
 }
 .pDescription { grid-area: 2 / 2 / 3 / 4; }
 .pDescription > p{
-    font-size: 10px;
+    font-size: 14px;
     margin: 0 20px 0px 20px;
     text-align: left;
 }
@@ -123,7 +123,7 @@
         margin: 15px 3px auto 3px;
     }
     .pDescription > p{
-        font-size: 14px;
+        font-size: 18px;
         margin: 0 20px 0px 20px;
         text-align: left;
     }
