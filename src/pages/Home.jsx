@@ -8,9 +8,10 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import Card from '../components/Card';
+import {products} from '../data/products.json'
 import CardContainer from '../components/CardContainer';
 import Categories from '../components/Categories';
+import Card from '../components/Card';
 
 
 const Home = () => {
@@ -18,7 +19,14 @@ const Home = () => {
         <>
             <Header title='Inicio' btn=''/>
             <Categories />
-            <CardContainer btn="" />
+            <CardContainer>
+                {products.map(categorie =>(
+                       categorie.items.map(item=>
+                        <Card key={item.id} name={item.name} price= {item.price} desc={item.description} src={item.img} />
+                        )
+                    )
+                )}
+            </CardContainer>
             <Footer goto='/cart' total= "33.000" buttonValue='ver carrito'/>
         </>
      );

@@ -10,10 +10,10 @@ const Categories = () => {
         <h3 id="cat">Categorias</h3>
         <div className="catContainer">
             <ul>
+                <li><button>Todo</button></li>
                 {products.map(categorie =>(
-                    <li key= {products.indexOf(categorie)} > <button>{categorie.cname}</button> </li>
+                    <li key= {categorie.cname} ><button>{categorie.cname}</button></li>
                 )
-
                 )}
             </ul>
         </div>

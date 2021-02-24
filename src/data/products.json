@@ -3,12 +3,14 @@
       "cname":"Accesorios",
       "items":[
          {
+           "id":1,
            "name":"Set topos Light",
            "description":"Incluye piñas, moño y flor\nRef:JOO3",
            "price":12000,
            "img":"../images/topos1.png"
          },
          {
+          "id":2,
           "name":"Set topos Dream",
           "description":"Incluye corazón, lazo y flor\nRef:JOO5",
           "price":12000,
@@ -19,26 +21,30 @@
     },
     {
       "cname":"Sombras",
-      "products":[
+      "items":[
         {
+          "id":3,
           "name":"Sombra Dodo Girl",
           "description":"Sombra para ojos con 12 tonos\nRef:MO30",
           "price":12000,
           "img":"../images/sombra1.png"
         } ,
         {
+          "id":4,
           "name":"Sombra Frutas Coco",
           "description":"Sombra para ojos con 9 tonos\nRef:MO32",
           "price":15000,
           "img":"../images/sombra2.png"
         } ,
         {
+          "id":5,
           "name":"Sombra Frutas Peach",
           "description":"Sombra para ojos con 9 tonos\nRef:MO31",
           "price":15000,
           "img":"../images/sombra3.png"
         } ,
         {
+          "id":6,
           "name":"Paleta Beauty Glazed",
           "description":"Paleta con 63 tonos de sombras para ojos\nRef:MO26",
           "price":15000,
@@ -48,14 +54,16 @@
     },
     {
       "cname":"Skincare",
-      "products":[
+      "items":[
         {
+          "id":7,
           "name":"Agua de rosas",
           "description":"Toníco facial de agua de rosas\nRef:MO08",
           "price":18000,
           "img":"../images/sk1.png"
         } ,
         {
+          "id":8,
           "name":"Mascarilla para ojos",
           "description":"Mascarilla de hydrogel para ojos\nRef:M004",
           "price":20000,
@@ -66,14 +74,15 @@
     },
     {
      "cname": "Labios",
-     "products":[
-      {
+     "items":[
+      {"id":9,
         "name":"Exfoliante klean color",
         "description":"Exfoliante de labios Klean Color\nRef:MO14",
         "price":10000,
         "img":"../images/lips1.png"
       } ,
       {
+        "id":10,
         "name":"Tinta Helados ",
         "description":"Tinta para labios trendy\nRef:M016",
         "price":6000,
@@ -84,14 +93,16 @@
     },
     {
       "cname":"Ojos",
-      "products":[
+      "items":[
         {
+          "id":11,
           "name":"Pestañina llama",
           "description":"Pestañina de llama trendy\nRef:MO20",
           "price":15000,
           "img":"../images/eyes1.png"
         } ,
         {
+          "id":12,
           "name":"Pestañina doble ",
           "description":"Pestañina con paso 1: Primer y paso 2: Pestañina\nRef:M022",
           "price":22000,

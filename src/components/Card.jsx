@@ -1,22 +1,24 @@
-import React from 'react';
-import pSample from '../images/productSample.png';
+import React, {useState}from 'react';
 import '../css/card.css'
 
 
+
 const Card = (props) => {
+
+    let price = props.price.toString();
     return ( 
         <div className="card">
             <div className="photo">
-                <img src={pSample} alt="product" className='pimg'/>
+                <img src={`${props.src}`} alt="product" className='pimg'/>
             </div>
             <div className="pName">
-                <h3>paleta Tokio de Miis Cosmetics</h3><button>{props.btnValue}</button>
+                <h3>{props.name}</h3><button>{props.btnValue}</button>
             </div>
             <div className="pDescription">
-                <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                <p>{props.desc}</p>
             </div>
             <div className="pCost"> 
-                <h4>$40.000</h4>
+                <h4>${price}</h4>
             </div>
             <div className="pAdd">
                 <button>-</button>
