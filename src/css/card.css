@@ -34,8 +34,8 @@
 }
 .pName > h3{
     font-family: 'Federo', sans-serif;
-    font-size: 14px;
-    margin: 15px 3px auto 3px;
+    font-size: 18px;
+    margin: 15px auto 5px;
 }
 .pName > button{
     color: red;
@@ -108,6 +108,7 @@
     .card{
         padding: 15px;
         width: 400px;
+        height: 180px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
