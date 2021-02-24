@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import "../css/home.css"
@@ -15,17 +15,32 @@ import Card from '../components/Card';
 
 
 const Home = () => {
+    //create state to manipulate the selected categorie with an object
+    const [categorie, setcategorie] = useState(products)
+    //function tha handles the categorie state
+    const catSelector = (items)=>{
+        // console.log(items)
+        setcategorie(items);
+    }
+
     return ( 
         <>
             <Header title='Inicio' btn=''/>
-            <Categories />
+            
+            <Categories catSelector= {catSelector}/>
             <CardContainer>
-                {products.map(categorie =>(
-                       categorie.items.map(item=>
+                {categorie===products?
+                categorie.map(cat =>(
+                       cat.items.map(item=>
                         <Card key={item.id} name={item.name} price= {item.price} desc={item.description} src={item.img} />
                         )
                     )
-                )}
+                )
+                :
+                categorie.map(item=>
+                    <Card key={item.id} name={item.name} price= {item.price} desc={item.description} src={item.img} />
+                    )
+                }
             </CardContainer>
             <Footer goto='/cart' total= "33.000" buttonValue='ver carrito'/>
         </>

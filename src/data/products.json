@@ -3,16 +3,16 @@
       "cname":"Accesorios",
       "items":[
          {
-           "id":1,
+           "id":"J003",
            "name":"Set topos Light",
-           "description":"Incluye piñas, moño y flor\nRef:JOO3",
+           "description":"Incluye piñas, moño y flor",
            "price":12000,
            "img":"../images/topos1.png"
          },
          {
-          "id":2,
+          "id":"J005",
           "name":"Set topos Dream",
-          "description":"Incluye corazón, lazo y flor\nRef:JOO5",
+          "description":"Incluye corazón, lazo y flor",
           "price":12000,
           "img":"../images/topos2.png"
         } 
@@ -23,30 +23,30 @@
       "cname":"Sombras",
       "items":[
         {
-          "id":3,
+          "id":"M030",
           "name":"Sombra Dodo Girl",
-          "description":"Sombra para ojos con 12 tonos\nRef:MO30",
+          "description":"Sombra para ojos con 12 tonos",
           "price":12000,
           "img":"../images/sombra1.png"
         } ,
         {
-          "id":4,
+          "id":"M032",
           "name":"Sombra Frutas Coco",
-          "description":"Sombra para ojos con 9 tonos\nRef:MO32",
+          "description":"Sombra para ojos con 9 tonos",
           "price":15000,
           "img":"../images/sombra2.png"
         } ,
         {
-          "id":5,
+          "id":"M031",
           "name":"Sombra Frutas Peach",
-          "description":"Sombra para ojos con 9 tonos\nRef:MO31",
+          "description":"Sombra para ojos con 9 tonos",
           "price":15000,
           "img":"../images/sombra3.png"
         } ,
         {
-          "id":6,
+          "id":"M026",
           "name":"Paleta Beauty Glazed",
-          "description":"Paleta con 63 tonos de sombras para ojos\nRef:MO26",
+          "description":"Paleta con 63 tonos de sombras para ojos",
           "price":15000,
           "img":"../images/sombra4.png"
         } 
@@ -56,16 +56,16 @@
       "cname":"Skincare",
       "items":[
         {
-          "id":7,
+          "id":"M008",
           "name":"Agua de rosas",
-          "description":"Toníco facial de agua de rosas\nRef:MO08",
+          "description":"Toníco facial de agua de rosas",
           "price":18000,
           "img":"../images/sk1.png"
         } ,
         {
-          "id":8,
+          "id":"M004",
           "name":"Mascarilla para ojos",
-          "description":"Mascarilla de hydrogel para ojos\nRef:M004",
+          "description":"Mascarilla de hydrogel para ojos",
           "price":20000,
           "img":"../images/sk2.png"
         }
@@ -75,16 +75,16 @@
     {
      "cname": "Labios",
      "items":[
-      {"id":9,
+      {"id":"M014",
         "name":"Exfoliante klean color",
-        "description":"Exfoliante de labios Klean Color\nRef:MO14",
+        "description":"Exfoliante de labios Klean Color",
         "price":10000,
         "img":"../images/lips1.png"
       } ,
       {
-        "id":10,
+        "id":"M016",
         "name":"Tinta Helados ",
-        "description":"Tinta para labios trendy\nRef:M016",
+        "description":"Tinta para labios trendy",
         "price":6000,
         "img":"../images/lips2.png"
       }
@@ -95,16 +95,16 @@
       "cname":"Ojos",
       "items":[
         {
-          "id":11,
+          "id":"M020",
           "name":"Pestañina llama",
-          "description":"Pestañina de llama trendy\nRef:MO20",
+          "description":"Pestañina de llama trendy",
           "price":15000,
           "img":"../images/eyes1.png"
         } ,
         {
-          "id":12,
+          "id":"M022",
           "name":"Pestañina doble ",
-          "description":"Pestañina con paso 1: Primer y paso 2: Pestañina\nRef:M022",
+          "description":"Pestañina con paso 1: Primer y paso 2: Pestañina",
           "price":22000,
           "img":"../images/eyes2.png"
         }
