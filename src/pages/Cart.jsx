@@ -12,6 +12,7 @@ import {
 import CardContainer from '../components/CardContainer';
 
 
+
 const Cart = () => {
 
     const btn = 
@@ -25,7 +26,7 @@ const Cart = () => {
         <>
             <Header title='Carrito' btn={btn}/>
             <CardContainer btn='x'/>
-            <Footer link= '/wa' delivery= "Domicilio: $2000" total= "33.000" buttonValue ='finalizar'/>
+            <Footer goto= '/home' delivery= "Domicilio: $2000" total= "33.000" buttonValue ='finalizar'/>
         </>
      );
 }
