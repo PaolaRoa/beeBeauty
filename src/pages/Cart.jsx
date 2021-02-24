@@ -8,8 +8,9 @@ import {
     Route,
     Link
   } from "react-router-dom";
-  import waW from '../images/wawhite.png'
-import CardContainer from '../components/CardContainer';
+  import {products} from '../data/products.json'
+  import CardContainer from '../components/CardContainer';
+  import Card from '../components/Card';
 
 
 
@@ -25,7 +26,16 @@ const Cart = () => {
     return ( 
         <>
             <Header title='Carrito' btn={btn}/>
-            <CardContainer btn='x'/>
+            <CardContainer>
+                {
+                products.map(cat =>(
+                       cat.items.map(item=>
+                        <Card key={item.id} name={item.name} price= {item.price} desc={item.description} src={item.img} btnValue="x" />
+                        )
+                    )
+                )
+                }
+            </CardContainer>
             <Footer goto= '/home' delivery= "Domicilio: $2000" total= "33.000" buttonValue ='finalizar'/>
         </>
      );
