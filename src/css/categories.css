@@ -1,5 +1,6 @@
 .catContainer{
     overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
 }
  #cat{
     margin: 3px;
@@ -14,6 +15,7 @@
     border-radius:20px;
     outline: none;
     background-color: #f2a270;
+    box-shadow: -1px 1px  0.5px #ff8800;
 }
 .catContainer > ul > li > button:active{
     background-color: #ff8800;
