@@ -15,6 +15,8 @@ import Card from '../components/Card';
 
 
 const Home = () => {
+    //create state that saves the cart
+    const [order, setOrder] = useState([])
     //create state to manipulate the selected categorie with an object
     const [categorie, setcategorie] = useState(products)
     //function tha handles the categorie state

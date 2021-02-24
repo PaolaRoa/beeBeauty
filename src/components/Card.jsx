@@ -1,9 +1,20 @@
 import React, {useState}from 'react';
 import '../css/card.css'
-
+import useQuantity from './hooks/useQuantity';
 
 
 const Card = (props) => {
+
+    const [quantity, setQuantity] = useState(0)
+    console.log(quantity)
+
+    const addQ = ()=>{
+        setQuantity(quantity+1)
+    }
+    const removeQ =()=>{
+        if(!quantity===0)setQuantity(quantity-1);
+        
+    }
 
     let price = props.price.toString();
     return ( 
@@ -21,9 +32,9 @@ const Card = (props) => {
                 <h4>${price}</h4>
             </div>
             <div className="pAdd">
-                <button>-</button>
-                <p>1</p>
-                <button>+</button>
+                <button onClick= {()=>removeQ}>-</button>
+                <p>{quantity}</p>
+                <button onClick={()=>addQ}>+</button>
             </div>
             <div className="btnAdd">
                 <button className= 'smallBtn'>Agregar</button>

@@ -43,6 +43,7 @@
     border: none;
     outline: none;
     align-self: self-start;
+    font-size: 21px;
 }
 .pDescription { grid-area: 2 / 2 / 3 / 4; }
 .pDescription > p{
