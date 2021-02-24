@@ -18,7 +18,7 @@ const Home = () => {
         <>
             <Header title='Inicio' btn=''/>
             <Categories />
-            <CardContainer />
+            <CardContainer btn="" />
             <Footer goto='/cart' total= "33.000" buttonValue='ver carrito'/>
         </>
      );

@@ -3,14 +3,14 @@ import pSample from '../images/productSample.png';
 import '../css/card.css'
 
 
-const Card = () => {
+const Card = (props) => {
     return ( 
         <div className="card">
             <div className="photo">
                 <img src={pSample} alt="product" className='pimg'/>
             </div>
             <div className="pName">
-                <h3>paleta Tokio de Miis Cosmetics</h3><button>X</button>
+                <h3>paleta Tokio de Miis Cosmetics</h3><button>{props.btnValue}</button>
             </div>
             <div className="pDescription">
                 <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>

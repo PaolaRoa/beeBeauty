@@ -9,6 +9,7 @@ import {
     Link
   } from "react-router-dom";
   import waW from '../images/wawhite.png'
+import CardContainer from '../components/CardContainer';
 
 
 const Cart = () => {
@@ -23,6 +24,7 @@ const Cart = () => {
     return ( 
         <>
             <Header title='Carrito' btn={btn}/>
+            <CardContainer btn='x'/>
             <Footer link= '/wa' delivery= "Domicilio: $2000" total= "33.000" buttonValue ='finalizar'/>
         </>
      );

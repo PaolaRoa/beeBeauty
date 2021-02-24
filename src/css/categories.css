@@ -8,12 +8,15 @@
     color: #313131;
 }
 .catContainer > ul > li > button{
-    background-color: #f0c600;
-    color: white;
+    border: 0px solid #ffd501;
+    color: rgb(255, 255, 255);
     padding: 5px;
     border-radius:20px;
-    border: none;
     outline: none;
+    background-color: #f2a270;
+}
+.catContainer > ul > li > button:active{
+    background-color: #ff8800;
 }
 ul{
     list-style: none;

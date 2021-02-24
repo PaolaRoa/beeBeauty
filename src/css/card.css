@@ -16,7 +16,9 @@
     
 .photo { 
     grid-area: 1 / 1 / 3 / 2;
-    filter: drop-shadow(0 0 3px #f1a347);
+    filter: drop-shadow(0 0 5px #21212160);
+    border-radius: 5px;
+    clip-path: circle(50.0% at 50% 50%);
 
     }
 .pimg{
@@ -44,7 +46,7 @@
 }
 .pDescription { grid-area: 2 / 2 / 3 / 4; }
 .pDescription > p{
-    font-size: 8px;
+    font-size: 10px;
     margin: 0 20px 0px 20px;
     text-align: left;
 }
@@ -57,7 +59,7 @@
     display: flex;
     align-items: self-end;
     justify-content: space-evenly;
-    background-color: #f0c600;
+    background-color: #ffe45f;
     margin: 0;
     padding: 0;
     width: fit-content;
@@ -67,7 +69,7 @@
     
 .pAdd > p{
     margin: 0 5px 0 5px;
-    color:#313131;
+    color:black;
     font-family: 'Federo', sans-serif;
 
 
