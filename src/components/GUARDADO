@@ -1,20 +1,20 @@
-import React, {useState}from 'react';
-import '../css/card.css'
-import useQuantity from './hooks/useQuantity';
-import QuantityBtn from './QuantityBtn';
-import useOrder from './hooks/useOrder'
-
-
-
 const Card = (props) => {
 
     useQuantity();
     useOrder();
 
     const [order, setorder] = useState([]);
-    
 
     const item=props.item;
+
+    const addProduct = ()=>{
+        if(item.quantity !== 0){
+            setorder([
+                ...order,
+                item
+    
+            ]);
+    }
 
     let price = item.price.toString();
     // console.log(Card.key)
@@ -45,5 +45,5 @@ const Card = (props) => {
      );
 }
 
- 
+} 
 export default Card;

@@ -10,20 +10,30 @@ import {
 import Welcome from './pages/Welcome';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import useQuantity from './components/hooks/useQuantity';
+import Categories from './components/Categories';
+
+
 
 function App() {
 
-  const [quantity, setQuantity] = useState(0)
-  console.log(quantity)
+useQuantity()
 
-  const addQ = ()=>{
-      setQuantity(quantity+1)
-  }
-  const removeQ =()=>{
-      if(!quantity===0)setQuantity(quantity-1);
-      
-  }
-  
+
+ useQuantity().products.map(cat => cat.items.map
+  (item=>(
+    item.quantity= 0
+    )));
+
+
+
+
+  // const [quantity, setQuantity] = useState(0);
+
+  // useQuantity().addOne= ()=> setQuantity(quantity+1);
+  // useQuantity().subsOne= ()=> setQuantity(quantity-1);
+  // useQuantity().quantity = quantity;
+
   return (
       <Router>
         <Route exact path="/">

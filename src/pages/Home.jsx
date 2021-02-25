@@ -8,13 +8,16 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import {products} from '../data/products.json'
+// import {products} from '../data/products.json';
 import CardContainer from '../components/CardContainer';
 import Categories from '../components/Categories';
 import Card from '../components/Card';
+import useQuantity from '../components/hooks/useQuantity';
 
 
 const Home = () => {
+    useQuantity()
+    const products = useQuantity().products
     //create state that saves the cart
     const [order, setOrder] = useState([])
     //create state to manipulate the selected categorie with an object
@@ -34,13 +37,25 @@ const Home = () => {
                 {categorie===products?
                 categorie.map(cat =>(
                        cat.items.map(item=>
-                        <Card key={item.id} name={item.name} price= {item.price} desc={item.description} src={item.img} btnValue="" />
+                        <Card key={item.id} 
+                        // name={item.name} price= {item.price} desc={item.description} src={item.img} 
+                        btnValue=""
+                        // addOne={item.addOne} subsOne={item.subsOne} q= {item.quantity}
+                        item={item}
+                        />
+
                         )
                     )
                 )
                 :
                 categorie.map(item=>
-                    <Card key={item.id} name={item.name} price= {item.price} desc={item.description} src={item.img} btnValue="" />
+                    <Card key={item.id} 
+                        // name={item.name} price= {item.price} desc={item.description} src={item.img} 
+                        btnValue=""
+                        // addOne={item.addOne} subsOne={item.subsOne} q= {item.quantity}
+                        item={item}
+                        />
+
                     )
                 }
             </CardContainer>
