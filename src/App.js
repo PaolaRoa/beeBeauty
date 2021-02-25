@@ -28,11 +28,12 @@ const [order, setOrder] = useState([])
 useOrder.setOrder = setOrder;
 useOrder.order= order;
 
-
+//creates a quantity property for every item
  useQuantity().products.map(cat => cat.items.map
   (item=>(
-    item.quantity= 0
+    item.quantity=0
     )));
+  
 
   return (
       <Router>

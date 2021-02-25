@@ -1,6 +1,8 @@
 import { createContext, useState } from 'react';
 
 
-const OrderContext = createContext({order:[], setOrder:()=>{}});
+const OrderContext = createContext({order:[]
+
+});
 
 export default OrderContext;

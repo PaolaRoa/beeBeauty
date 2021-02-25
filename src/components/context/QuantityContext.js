@@ -5,9 +5,7 @@ import products from '../../data/products.json';
 const QuantityContext = createContext({
     
     products:products.products,
-    mapProducts: ()=>{},
-    addOne:()=>{},
-    subsOne:()=> {}
+    upDate:()=>{}
 });
 
 export default QuantityContext;

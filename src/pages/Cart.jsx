@@ -11,10 +11,15 @@ import {
   import {products} from '../data/products.json'
   import CardContainer from '../components/CardContainer';
   import Card from '../components/Card';
+  import useOrder from '../components/hooks/useOrder'
 
 
 
 const Cart = () => {
+
+    
+    const order = useOrder.order;
+    console.log(order)
 
     const btn = 
         <Link to='/home'>
@@ -28,12 +33,10 @@ const Cart = () => {
             <Header title='Carrito' btn={btn}/>
             <CardContainer>
                 {
-                products.map(cat =>(
-                       cat.items.map(item=>
-                        <Card key={item.id} name={item.name} price= {item.price} desc={item.description} src={item.img} btnValue="x" />
+                order.map((item=>
+                        <Card key={item.id} item={item} btnValue="x" />
                         )
                     )
-                )
                 }
             </CardContainer>
             <Footer goto= '/home' delivery= "Domicilio: $2000" total= "33.000" buttonValue ='finalizar'/>

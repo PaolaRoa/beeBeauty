@@ -18,15 +18,14 @@ import useQuantity from '../components/hooks/useQuantity';
 const Home = () => {
     useQuantity()
     const products = useQuantity().products
-    //create state that saves the cart
-    const [order, setOrder] = useState([])
     //create state to manipulate the selected categorie with an object
     const [categorie, setcategorie] = useState(products)
-    //function tha handles the categorie state
+    //function that handles the categorie state
     const catSelector = (items)=>{
         // console.log(items)
         setcategorie(items);
     }
+    
 
     return ( 
         <>
