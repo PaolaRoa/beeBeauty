@@ -19,7 +19,7 @@ const QuantityBtn = (props) => {
         setQuantity(quantity+1);
     }
 
-    console.log(item.name ,item.quantity)
+    // console.log(item.name ,item.quantity)
 
     return ( 
         <div className="pAdd">

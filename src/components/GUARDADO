@@ -15,7 +15,7 @@ const Card = (props) => {
     
             ]);
     }
-
+    }
     let price = item.price.toString();
     // console.log(Card.key)
     return ( 

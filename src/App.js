@@ -11,28 +11,28 @@ import Welcome from './pages/Welcome';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import useQuantity from './components/hooks/useQuantity';
+import useOrder from './components/hooks/useOrder';
 import Categories from './components/Categories';
 
 
 
 function App() {
 
-useQuantity()
+
+
+const [order, setOrder] = useState([])
+
+// setOrder(useOrder().order);
+
+
+useOrder.setOrder = setOrder;
+useOrder.order= order;
 
 
  useQuantity().products.map(cat => cat.items.map
   (item=>(
     item.quantity= 0
     )));
-
-
-
-
-  // const [quantity, setQuantity] = useState(0);
-
-  // useQuantity().addOne= ()=> setQuantity(quantity+1);
-  // useQuantity().subsOne= ()=> setQuantity(quantity-1);
-  // useQuantity().quantity = quantity;
 
   return (
       <Router>

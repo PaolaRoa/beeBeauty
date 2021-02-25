@@ -7,14 +7,18 @@ import useOrder from './hooks/useOrder'
 
 
 const Card = (props) => {
-
+    const item=props.item;
     useQuantity();
-    useOrder();
+    console.log(useOrder.order);
 
-    const [order, setorder] = useState([]);
+    const upOrder=()=>{
+        if(item.quantity !==0){
+            useOrder.order.push(item)
+        }
+        console.log(useOrder.order)
+    }
     
 
-    const item=props.item;
 
     let price = item.price.toString();
     // console.log(Card.key)
@@ -39,7 +43,7 @@ const Card = (props) => {
                 <button onClick={()=>props.addOne()}>+</button>
             </div> */}
             <div className="btnAdd">
-                <button className= 'smallBtn'>Agregar</button>
+                <button onClick={()=>upOrder() } className= 'smallBtn'>Agregar</button>
             </div>
         </div>
      );
