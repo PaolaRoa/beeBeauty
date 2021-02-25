@@ -19,12 +19,12 @@ import Categories from './components/Categories';
 function App() {
 
 
-
+//states that keep the order 
 const [order, setOrder] = useState([])
 
 // setOrder(useOrder().order);
 
-
+//inicialize the order
 useOrder.setOrder = setOrder;
 useOrder.order= order;
 
@@ -33,7 +33,22 @@ useOrder.order= order;
   (item=>(
     item.quantity=0
     )));
-  
+//function to get total
+// const [total, setTotal] = useState(useOrder().total)
+// useOrder().total= total;
+
+// const getTotal = ()=>{
+//     let gtotal= total;
+//     order.forEach(
+//         item=> {
+//             let subtotal = item.quantity * item.price;
+//             gtotal +=subtotal;
+//         }
+//     )
+//     setTotal(gtotal)
+// }
+
+// useOrder().getTotal=getTotal;
 
   return (
       <Router>

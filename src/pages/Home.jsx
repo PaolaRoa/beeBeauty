@@ -13,6 +13,8 @@ import CardContainer from '../components/CardContainer';
 import Categories from '../components/Categories';
 import Card from '../components/Card';
 import useQuantity from '../components/hooks/useQuantity';
+import useOrder from '../components/hooks/useOrder';
+
 
 
 const Home = () => {
@@ -25,7 +27,9 @@ const Home = () => {
         // console.log(items)
         setcategorie(items);
     }
-    
+
+    // useOrder().getTotal();
+    console.log(useOrder().setTotal)
 
     return ( 
         <>
@@ -38,7 +42,7 @@ const Home = () => {
                        cat.items.map(item=>
                         <Card key={item.id} 
                         // name={item.name} price= {item.price} desc={item.description} src={item.img} 
-                        btnValue=""
+                        btnValue="" action="Agregar"
                         // addOne={item.addOne} subsOne={item.subsOne} q= {item.quantity}
                         item={item}
                         />
@@ -52,13 +56,13 @@ const Home = () => {
                         // name={item.name} price= {item.price} desc={item.description} src={item.img} 
                         btnValue=""
                         // addOne={item.addOne} subsOne={item.subsOne} q= {item.quantity}
-                        item={item}
+                        item={item} action="Agregar"
                         />
 
                     )
                 }
             </CardContainer>
-            <Footer goto='/cart' total= "33.000" buttonValue='ver carrito'/>
+            <Footer goto='/cart' total= {useOrder().total} buttonValue='ver carrito'/>
         </>
      );
 }

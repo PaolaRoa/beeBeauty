@@ -11,11 +11,9 @@ const Card = (props) => {
     //item prop coming from home or Cart
     const item=props.item;
 
-    // const setOrder = useOrder.setOrder();
-
-//updates list items in order when press the agregar button
-//pasar a app
-    
+    // obtener el total;
+        
+//updates list items and total in order when press the agregar button 
     const upOrder=()=>{
         if(item.quantity !==0){
             if(useOrder.order.includes(item)){
@@ -23,21 +21,19 @@ const Card = (props) => {
                 useOrder.order.splice(i,1)
             }
             useOrder.order.push(item)
-        }
-        console.log(useOrder.order)
-    }
 
+        }
+        getTotal()
+        console.log(useOrder.order)
+    
+    }
+    //states tha keeps the quantiti on items 
     const [quantity, setQuantity] = useState(item.quantity);
     item.quantity = quantity;
-    
-    
-    // //make the item quantity persitent
-    // useQuantity().products.map(categorie=>
-    //     categorie.items.map(itemO=>(
-    //       itemO === item? itemO.quantity = quantity :
-    //       itemO.quantity = itemO.quantity
-    //     )))
-    //pasar a App
+
+
+// useOrder().getTotal=getTotal;
+//fuctions to setquantities with the + and - buttons
     const subsOne = ()=> {
         if(quantity!==0)setQuantity(quantity-1);
         
@@ -46,7 +42,30 @@ const Card = (props) => {
         setQuantity(quantity+1);
     }
 
+//function to remove the item when button X is clicked 
+    const removeItem=()=>{
+        setQuantity(0);
+        let i = useOrder.order.indexOf(item);
+        if(i!== -1){useOrder.order.splice(i,1)}
 
+    }
+//calculates the total
+
+    const [total, settotal] = useState()
+
+    const getTotal=()=>{
+        let t=0;
+        useOrder.order.forEach(
+            item=> {
+                
+                let subtotal = item.quantity * item.price;
+                t += subtotal;
+                console.log(t)
+                settotal(t)   
+            }
+        )}
+    useOrder().total = total;
+    //price to string to add a point
     let price = item.price.toString();
     // console.log(Card.key)
     return ( 
@@ -55,7 +74,7 @@ const Card = (props) => {
                 <img src={`${item.img}`} alt="product" className='pimg'/>
             </div>
             <div className="pName">
-                <h3>{item.name}</h3><button>{props.btnValue}</button>
+                <h3>{item.name}</h3><button onClick={()=>{removeItem()}}>{props.btnValue}</button>
             </div>
             <div className="pDescription">
                 <p>{item.description}</p>
@@ -75,7 +94,7 @@ const Card = (props) => {
                 <button onClick={()=>props.addOne()}>+</button>
             </div> */}
             <div className="btnAdd">
-                <button onClick={()=>upOrder() } className= 'smallBtn'>Agregar</button>
+                <button onClick={()=>upOrder() } className= 'smallBtn'>{props.action}</button>
             </div>
         </div>
      );

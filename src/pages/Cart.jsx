@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import back from '../images/back.png'
@@ -16,10 +16,23 @@ import {
 
 
 const Cart = () => {
-
-    
-    const order = useOrder.order;
+    //keeps the order to render the cards on the cart page
+    const [order, setorder] = useState(useOrder.order);
+    useOrder.order= order;
     console.log(order)
+
+
+
+    //calculates the total and asigne to state
+    // const getTotal=()=>{
+    //     order.forEach(
+    //         item=> {
+    //             let subtotal = item.quantity * item.price;
+    //             settotal(total+subtotal)
+    //             console.log(total)
+    //         }
+    //     )}
+
 
     const btn = 
         <Link to='/home'>
@@ -34,12 +47,12 @@ const Cart = () => {
             <CardContainer>
                 {
                 order.map((item=>
-                        <Card key={item.id} item={item} btnValue="x" />
+                        <Card key={item.id} item={item} btnValue="x" action="Actualizar"/>
                         )
                     )
                 }
             </CardContainer>
-            <Footer goto= '/home' delivery= "Domicilio: $2000" total= "33.000" buttonValue ='finalizar'/>
+            <Footer goto= '/home' delivery= "Domicilio: $2000" total= {useOrder().total} buttonValue ='finalizar'/>
         </>
      );
 }

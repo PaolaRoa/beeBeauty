@@ -1,12 +1,22 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
+  import useOrder from '../components/hooks/useOrder'
 
 const Footer = (props) => {
+
+
+    // useEffect(() => {
+    //     effect
+    //     return () => {
+    //         cleanup
+    //     }
+    // }, [input])
+
     return (
         <footer>
             <div>
