@@ -39,7 +39,7 @@ const Cart = () => {
                     )
                 }
             </CardContainer>
-            <Footer goto= '/home' delivery= "Domicilio: $2000" total= {useOrder().total} buttonValue ='finalizar'/>
+            <Footer goto= '/home' delivery= "Domicilio: $2000" buttonValue ='finalizar'/>
         </>
      );
 }

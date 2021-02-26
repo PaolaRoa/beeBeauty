@@ -46,7 +46,10 @@ const Card = (props) => {
     const removeItem=()=>{
         setQuantity(0);
         let i = useOrder.order.indexOf(item);
-        if(i!== -1){useOrder.order.splice(i,1)}
+
+        if(i!== -1){useOrder.order.splice(i,1)};
+
+        getTotal()
 
     }
 //calculates the total
@@ -56,7 +59,8 @@ const Card = (props) => {
 
     const getTotal=()=>{
         let t=0;
-        useOrder.order.forEach(
+        if(useOrder.order.length > 0)
+       {useOrder.order.forEach(
             item=> {
                 
                 let subtotal = item.quantity * item.price;
@@ -65,6 +69,9 @@ const Card = (props) => {
                 settotal(t)   
             }
         )}
+        else{
+            settotal(0);
+        }}
     console.log(total)
 
     //price to string to add a point
