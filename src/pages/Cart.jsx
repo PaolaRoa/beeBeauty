@@ -52,14 +52,14 @@ const Cart = () => {
     return ( 
         <>
             <Header title='Carrito' btn={btn}/>
-            <CardContainer>
+            <div className="cardContainer">
                 {
                 order.map((item=>
                         <Card key={item.id} item={item} btnValue="x" action="Actualizar"/>
                         )
                     )
                 }
-            </CardContainer>
+            </div>
             <Footer goto= {waString()} delivery= "Domicilio: $2000" buttonValue ='finalizar' />
         </>
      );

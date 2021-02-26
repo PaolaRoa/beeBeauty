@@ -34,7 +34,7 @@ const Home = () => {
             <Header title='Inicio' btn=''/>
             
             <Categories catSelector= {catSelector}/>
-            <CardContainer>
+            <div className="cardContainer">
                 {categorie===products?
                 categorie.map(cat =>(
                        cat.items.map(item=>
@@ -60,7 +60,7 @@ const Home = () => {
 
                     )
                 }
-            </CardContainer>
+            </div>
             <Footer goto='/cart' buttonValue='ver carrito' />
         </>
      );

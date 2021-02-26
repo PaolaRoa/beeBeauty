@@ -1,20 +1,16 @@
 import React, {useState}from 'react';
 import '../css/card.css'
-import useQuantity from './hooks/useQuantity';
 // import QuantityBtn from './QuantityBtn';
 import useOrder from './hooks/useOrder'
-import { findRenderedComponentWithType } from 'react-dom/test-utils';
+
 
 
 
 const Card = (props) => {
 
-
-    console.log(useOrder.reload)
-    //item prop coming from home or Cart
+ //item prop coming from home or Cart
     const item=props.item;  
 //updates list items and total in order when press the agregar button 
-
     const upOrder=()=>{
         if(item.quantity !==0){
             if(useOrder.order.includes(item)){
@@ -27,9 +23,7 @@ const Card = (props) => {
         getTotal()
         console.log(useOrder.order) 
     }
-
-
-    //states tha keeps the quantiti on items 
+ //states tha keeps the quantiti on items 
     const [quantity, setQuantity] = useState(item.quantity);
     item.quantity = quantity;
 //fuctions to setquantities with the + and - buttons
@@ -39,7 +33,7 @@ const Card = (props) => {
     const addOne = ()=>{
         setQuantity(quantity+1);
     }
-//function to remove the item when button X is clicked 
+//function to remove the item and updates the total when button X is clicked 
     const removeItem=()=>{
         setQuantity(0);
         let i = useOrder.order.indexOf(item);
@@ -47,13 +41,14 @@ const Card = (props) => {
         if(i!== -1){useOrder.order.splice(i,1)};
 
         getTotal()    }
-//calculates the total
-
+//function that calculates the total
+    //state total equals to context total
     const [total, settotal] = useState(useOrder().total)
     useOrder().total =total;
-
+        //function that sets total
     const getTotal=()=>{
         let t=0;
+        //if are items in the order array define de total
         if(useOrder.order.length > 0)
        {useOrder.order.forEach(
             item=> {
@@ -64,14 +59,13 @@ const Card = (props) => {
                 settotal(t)   
             }
         )}
+        //if order array hasn't items the total is $0
         else{
             settotal(0);
         }}
     console.log(total)
-
+    //asigns the function gettotal to context settotal value
     useOrder.settotal=()=>getTotal()
-
-
 
     //price to string to add a point
     let price = item.price.toString();
