@@ -91,6 +91,7 @@ const Card = (props) => {
             </button>
             :
             <button onClick={()=>upOrder()} 
+                
                 className= 'smallBtn'>{props.action}
             </button>
 
