@@ -11,20 +11,33 @@ const Card = (props) => {
     let {order} = useOrder;
     const {getTotal} = useOrder;
   
-    console.log(order)
+    console.log(order, useOrder().total)
  //item prop coming from home or Cart
     const item=props.item;  
 //updates list items and total in order when press the agregar button 
     const upOrder=()=>{
-        if(item.quantity !==0){
-            if(order.includes(item)){
-                let i = order.indexOf(item);
-                order.splice(i,1)
+        // if(item.quantity !==0){
+        //     if(order.includes(item)){
+        //         let i = order.indexOf(item);
+        //         order.splice(i,1)
+        //     }
+        //     order.push(item)
+        // }
+        if(order.lenght > 0){
+            order.forEach(
+            itemOrder=> { 
+                if(itemOrder.id === item.id){
+                    itemOrder.quantity = item.quantity;
+                }
+                else{
+                    order.push(item)
+                }
             }
-            order.push(item)
+        )
+            
         }
         getTotal()
-        console.log(order) 
+        // console.log(order, "total ", useOrder.total) 
     }
  //states tha keeps the quantiti on items 
     const [quantity, setQuantity] = useState(item.quantity);

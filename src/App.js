@@ -35,15 +35,15 @@ const [Stotal, setStotal] = useState(useOrder().total)
     useOrder().total =Stotal;
         //function that sets total
         useOrder.getTotal=()=>{
-        let t=0;
+        // let t=0;
         //if are items in the order array define de total
         if(order.length > 0)
        {order.forEach(
             item=> {
                 
                 let subtotal = item.quantity * item.price;
-                t += subtotal;
-                setStotal(t)   
+                // t += subtotal;
+                setStotal(Stotal+subtotal)   
             }
         )}
         //if order array hasn't items the total is $0
