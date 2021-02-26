@@ -31,7 +31,6 @@ const Cart = () => {
     const waString=()=>{
         let str = '';
         order.forEach(item=>{
-            //https://wa.me/5211234567890?text=Me%20interesa%20in%20el%20auto%20que%20vendes
             let subst=`${item.id}%20${item.name}%20(${item.quantity})%20${item.quantity*item.price}%20`;
             str+=subst;            
         }   
