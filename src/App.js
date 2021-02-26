@@ -37,9 +37,12 @@ useOrder.setTotal = setTotal;
   (item=>(
     item.quantity=0
     )));
-//function to get total
-// const [total, setTotal] = useState(useOrder().total)
-// useOrder().total= total;
+//PRUEBA FOOTER RECARGUE
+const [update, setupdate] = useState(useOrder().reload);
+
+useOrder().setreload =()=>setupdate(!update)
+
+
 
 
 

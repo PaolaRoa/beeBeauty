@@ -18,6 +18,7 @@ import useOrder from '../components/hooks/useOrder';
 
 
 const Home = () => {
+    console.log("renderizando")
     useOrder().setTotal();
     const products = useQuantity().products
     //create state to manipulate the selected categorie with an object
@@ -42,6 +43,7 @@ const Home = () => {
                         btnValue="" action="Agregar"
                         // addOne={item.addOne} subsOne={item.subsOne} q= {item.quantity}
                         item={item}
+                        onClick={()=>useOrder.setTotal()}
                         />
 
                         )
@@ -59,7 +61,7 @@ const Home = () => {
                     )
                 }
             </CardContainer>
-            <Footer goto='/cart' buttonValue='ver carrito'/>
+            <Footer goto='/cart' buttonValue='ver carrito' />
         </>
      );
 }

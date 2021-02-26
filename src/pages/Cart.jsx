@@ -16,10 +16,31 @@ import {
 
 
 const Cart = () => {
+
     //keeps the order to render the cards on the cart page
     const [order, setorder] = useState(useOrder.order);
     useOrder.order= order;
     console.log(order)
+    let total = useOrder().total;
+    // build whatsapp string
+    let waMsj='';
+    const waString=()=>{
+        let str = '';
+        order.forEach(item=>{
+            //https://wa.me/5211234567890?text=Me%20interesa%20in%20el%20auto%20que%20vendes
+            let subst=`${item.id}%20${item.name}%20(${item.quantity})%20${item.quantity*item.price}%20`;
+            str+=subst;            
+        }   
+        )
+        let waS = `https://wa.me/573214845851?text=${str}`
+        waS=  waS.replace(/ /g, '%20');
+       ;
+        waMsj=`${waS}%20Total:%20${total}`
+        return waMsj;
+        
+    }
+
+
 
     const btn = 
         <Link to='/home'>
@@ -39,7 +60,7 @@ const Cart = () => {
                     )
                 }
             </CardContainer>
-            <Footer goto= '/home' delivery= "Domicilio: $2000" buttonValue ='finalizar'/>
+            <Footer goto= {waString()} delivery= "Domicilio: $2000" buttonValue ='finalizar' />
         </>
      );
 }

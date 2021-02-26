@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react';
+import { findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
 import {
     BrowserRouter as Router,
     Switch,
@@ -6,11 +7,11 @@ import {
     Link
   } from "react-router-dom";
   import useOrder from '../components/hooks/useOrder'
+import useQuantity from './hooks/useQuantity';
 
 const Footer = (props) => {
-    
-    const [total, settotal] = useState(0);
 
+    console.log(props.goto)
 
     return (
         <footer>
@@ -18,9 +19,18 @@ const Footer = (props) => {
                 <p>{props.delivery}</p>
                 <h3>Total: ${useOrder().total}</h3>
             </div>
-            <Link to={props.goto}>
+            {props.goto ==='/cart'?
+             <Link to={props.goto}>
+             <button className= 'actionBtn'>{props.buttonValue}</button>
+         </Link>
+         :
+         <a href={props.goto}>
+         <button className= 'actionBtn'>{props.buttonValue}</button>
+         </a>
+            }
+            {/* <Link to={props.goto}>
                 <button className= 'actionBtn'>{props.buttonValue}</button>
-            </Link>
+            </Link> */}
             
 
 

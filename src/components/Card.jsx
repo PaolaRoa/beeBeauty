@@ -3,17 +3,18 @@ import '../css/card.css'
 import useQuantity from './hooks/useQuantity';
 // import QuantityBtn from './QuantityBtn';
 import useOrder from './hooks/useOrder'
+import { findRenderedComponentWithType } from 'react-dom/test-utils';
 
 
 
 const Card = (props) => {
-    useQuantity();
-    //item prop coming from home or Cart
-    const item=props.item;
 
-    // obtener el total;
-        
+
+    console.log(useOrder.reload)
+    //item prop coming from home or Cart
+    const item=props.item;  
 //updates list items and total in order when press the agregar button 
+
     const upOrder=()=>{
         if(item.quantity !==0){
             if(useOrder.order.includes(item)){
@@ -24,24 +25,20 @@ const Card = (props) => {
 
         }
         getTotal()
-        console.log(useOrder.order)
-    
+        console.log(useOrder.order) 
     }
+
+
     //states tha keeps the quantiti on items 
     const [quantity, setQuantity] = useState(item.quantity);
     item.quantity = quantity;
-
-
-// useOrder().getTotal=getTotal;
 //fuctions to setquantities with the + and - buttons
     const subsOne = ()=> {
-        if(quantity!==0)setQuantity(quantity-1);
-        
+        if(quantity!==0)setQuantity(quantity-1);        
     }
     const addOne = ()=>{
         setQuantity(quantity+1);
     }
-
 //function to remove the item when button X is clicked 
     const removeItem=()=>{
         setQuantity(0);
@@ -49,9 +46,7 @@ const Card = (props) => {
 
         if(i!== -1){useOrder.order.splice(i,1)};
 
-        getTotal()
-
-    }
+        getTotal()    }
 //calculates the total
 
     const [total, settotal] = useState(useOrder().total)
@@ -73,6 +68,10 @@ const Card = (props) => {
             settotal(0);
         }}
     console.log(total)
+
+    useOrder.settotal=()=>getTotal()
+
+
 
     //price to string to add a point
     let price = item.price.toString();
@@ -96,12 +95,6 @@ const Card = (props) => {
                 <p>{item.quantity}</p>
                 <button onClick={()=>addOne()}>+</button>
             </div>
-            {/* <QuantityBtn item={props.item}/> */}
-            {/* <div className="pAdd">
-                <button onClick= {()=>props.subsOne()}>-</button>
-                <p>{props.q}</p>
-                <button onClick={()=>props.addOne()}>+</button>
-            </div> */}
             <div className="btnAdd">
                 <button onClick={()=>upOrder() } className= 'smallBtn'>{props.action}</button>
             </div>
