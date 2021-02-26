@@ -10,7 +10,9 @@ const Categories = (props) => {
         <h3 id="cat">Categorias</h3>
         <div className="catContainer">
             <ul>
+                {/* this button shows all products setting the products state with products array */}
                 <li><button onClick = {()=>props.catSelector(products)}>Todo</button></li>
+                {/* maps the products array and generates a button for every categorie */}
                 {products.map(categorie =>(
                     <li key= {products.indexOf(categorie)} >
                         <button onClick = {()=>props.catSelector(categorie.items)}>{categorie.cname}</button>

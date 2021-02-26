@@ -9,31 +9,32 @@ import {
   import useOrder from '../components/hooks/useOrder'
 import useQuantity from './hooks/useQuantity';
 
+
+
 const Footer = (props) => {
 
-    console.log(props.goto)
+    const {order, total} = useOrder();
 
     return (
         <footer>
             <div>
+                {/* shows the delivery value */}
                 <p>{props.delivery}</p>
-                <h3>Total: ${useOrder().total}</h3>
+                {/* shows the total saved in order context*/}
+                <h3>Total: ${total}</h3>
             </div>
+            {/* conditional because if the route isn't /cart means that the button is clicked 
+            from cart component so the url is whatsapp url not a componnent  */}
             {props.goto ==='/cart'?
              <Link to={props.goto}>
              <button className= 'actionBtn'>{props.buttonValue}</button>
          </Link>
          :
+        //  if its no cart then put the button in an a tag making ref to whatsapp url
          <a href={props.goto}>
          <button className= 'actionBtn'>{props.buttonValue}</button>
          </a>
             }
-            {/* <Link to={props.goto}>
-                <button className= 'actionBtn'>{props.buttonValue}</button>
-            </Link> */}
-            
-
-
         </footer>
     );
 }

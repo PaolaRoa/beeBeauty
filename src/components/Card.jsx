@@ -8,6 +8,7 @@ import useOrder from './hooks/useOrder'
 
 const Card = (props) => {
 
+    const {order, ordertotal} = useOrder();
  //item prop coming from home or Cart
     const item=props.item;  
 //updates list items and total in order when press the agregar button 
@@ -69,7 +70,7 @@ const Card = (props) => {
 
     //price to string to add a point
     let price = item.price.toString();
-    // console.log(Card.key)
+    
     return ( 
         <div className="card">
             <div className="photo">
