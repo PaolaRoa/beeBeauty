@@ -28,9 +28,9 @@ const [order, setOrder] = useState([])
 useOrder.setOrder = setOrder;
 useOrder.order= order;
 
-const [total, setTotal] = useState(0);
-useOrder.total = total;
-useOrder.setTotal = setTotal;
+// const [total, setTotal] = useState(useOrder().total);
+// useOrder().total = total;
+// useOrder.setTotal = setTotal;
 
 //creates a quantity property for every item
  useQuantity().products.map(cat => cat.items.map

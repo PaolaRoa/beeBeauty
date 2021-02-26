@@ -17,6 +17,10 @@ import {
 
 const Cart = () => {
 
+    const [f, setf] = useState(false);
+    const hf = ()=>{
+        setf(!f)
+    }
     //keeps the order to render the cards on the cart page
     const [order, setorder] = useState(useOrder.order);
     useOrder.order= order;
@@ -55,12 +59,12 @@ const Cart = () => {
             <div className="cardContainer">
                 {
                 order.map((item=>
-                        <Card key={item.id} item={item} btnValue="x" action="Actualizar"/>
+                        <Card key={item.id} item={item} btnValue="x" action="Actualizar" hf={hf}/>
                         )
                     )
                 }
             </div>
-            <Footer goto= {waString()} delivery= "Domicilio: $2000" buttonValue ='finalizar' />
+            <Footer f={f} goto= {waString()} delivery= "Domicilio: $2000" buttonValue ='finalizar' total= {total}/>
         </>
      );
 }
