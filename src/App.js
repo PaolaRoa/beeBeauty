@@ -28,9 +28,36 @@ const [order, setOrder] = useState([])
 useOrder.setOrder = setOrder;
 useOrder.order= order;
 
-// const [total, setTotal] = useState(useOrder().total);
-// useOrder().total = total;
-// useOrder.setTotal = setTotal;
+//////////////prueba----------------------------------------------------
+
+
+const [Stotal, setStotal] = useState(useOrder().total)
+    useOrder().total =Stotal;
+        //function that sets total
+        useOrder.getTotal=()=>{
+        let t=0;
+        //if are items in the order array define de total
+        if(order.length > 0)
+       {order.forEach(
+            item=> {
+                
+                let subtotal = item.quantity * item.price;
+                t += subtotal;
+                setStotal(t)   
+            }
+        )}
+        //if order array hasn't items the total is $0
+        else{
+            setStotal(0);
+        }}
+
+    console.log(useOrder.getTotal)
+
+
+  
+//fin prueba---------------------------------------------------------------------------------------------
+
+
 
 //creates a quantity property for every item
  useQuantity().products.map(cat => cat.items.map
@@ -38,9 +65,7 @@ useOrder.order= order;
     item.quantity=0
     )));
 //PRUEBA FOOTER RECARGUE
-const [update, setupdate] = useState(useOrder().reload);
 
-useOrder().setreload =()=>setupdate(!update)
 
 
 

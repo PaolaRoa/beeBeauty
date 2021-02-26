@@ -9,6 +9,8 @@ import useOrder from './hooks/useOrder'
 const Card = (props) => {
 
     let {order} = useOrder;
+    const {getTotal} = useOrder;
+  
     console.log(order)
  //item prop coming from home or Cart
     const item=props.item;  
@@ -41,30 +43,31 @@ const Card = (props) => {
 
         if(i!== -1){order.splice(i,1)};
 
-        getTotal()    }
+        getTotal()   
+     }
 //function that calculates the total
     //state total equals to context 
     
-    const [Stotal, setStotal] = useState(useOrder().total)
-    useOrder().total =Stotal;
-        //function that sets total
-    const getTotal=()=>{
-        let t=0;
-        //if are items in the order array define de total
-        if(order.length > 0)
-       {order.forEach(
-            item=> {
+    // const [Stotal, setStotal] = useState(useOrder().total)
+    // useOrder().total =Stotal;
+    //     //function that sets total
+    // const getTotal=()=>{
+    //     let t=0;
+    //     //if are items in the order array define de total
+    //     if(order.length > 0)
+    //    {order.forEach(
+    //         item=> {
                 
-                let subtotal = item.quantity * item.price;
-                t += subtotal;
-                setStotal(t)   
-            }
-        )}
-        //if order array hasn't items the total is $0
-        else{
-            setStotal(0);
-        }}
-    console.log(Stotal)
+    //             let subtotal = item.quantity * item.price;
+    //             t += subtotal;
+    //             setStotal(t)   
+    //         }
+    //     )}
+    //     //if order array hasn't items the total is $0
+    //     else{
+    //         setStotal(0);
+    //     }}
+    // console.log(Stotal)
 
     //trying to handle footer from card
 
@@ -92,7 +95,7 @@ const Card = (props) => {
                 <button onClick={()=>addOne()}>+</button>
             </div>
             <div className="btnAdd">
-                <button onClick={()=>{props.hf();
+                <button onClick={()=>{
                     upOrder();
                                     // props.hf()
                                 }} 
