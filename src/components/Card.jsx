@@ -45,31 +45,7 @@ const Card = (props) => {
 
         getTotal()   
      }
-//function that calculates the total
-    //state total equals to context 
-    
-    // const [Stotal, setStotal] = useState(useOrder().total)
-    // useOrder().total =Stotal;
-    //     //function that sets total
-    // const getTotal=()=>{
-    //     let t=0;
-    //     //if are items in the order array define de total
-    //     if(order.length > 0)
-    //    {order.forEach(
-    //         item=> {
-                
-    //             let subtotal = item.quantity * item.price;
-    //             t += subtotal;
-    //             setStotal(t)   
-    //         }
-    //     )}
-    //     //if order array hasn't items the total is $0
-    //     else{
-    //         setStotal(0);
-    //     }}
-    // console.log(Stotal)
 
-    //trying to handle footer from card
 
 
     //price to string to add a point
