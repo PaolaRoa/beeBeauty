@@ -51,7 +51,8 @@ const Card = (props) => {
     }
 //calculates the total
 
-    const [total, settotal] = useState()
+    const [total, settotal] = useState(useOrder().total)
+    useOrder().total =total;
 
     const getTotal=()=>{
         let t=0;
@@ -64,7 +65,8 @@ const Card = (props) => {
                 settotal(t)   
             }
         )}
-    useOrder().total = total;
+    console.log(total)
+
     //price to string to add a point
     let price = item.price.toString();
     // console.log(Card.key)

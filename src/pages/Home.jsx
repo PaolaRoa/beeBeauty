@@ -28,9 +28,6 @@ const Home = () => {
         setcategorie(items);
     }
 
-    // useOrder().getTotal();
-    console.log(useOrder().setTotal)
-
     return ( 
         <>
             <Header title='Inicio' btn=''/>

@@ -21,19 +21,6 @@ const Cart = () => {
     useOrder.order= order;
     console.log(order)
 
-
-
-    //calculates the total and asigne to state
-    // const getTotal=()=>{
-    //     order.forEach(
-    //         item=> {
-    //             let subtotal = item.quantity * item.price;
-    //             settotal(total+subtotal)
-    //             console.log(total)
-    //         }
-    //     )}
-
-
     const btn = 
         <Link to='/home'>
             <button className= 'backBtn'>

@@ -8,15 +8,8 @@ import {
   import useOrder from '../components/hooks/useOrder'
 
 const Footer = (props) => {
-
-
-    // useEffect(() => {
-    //     effect
-    //     return () => {
-    //         cleanup
-    //     }
-    // }, [input])
-
+    
+    
     return (
         <footer>
             <div>
