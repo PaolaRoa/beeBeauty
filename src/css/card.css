@@ -95,6 +95,9 @@
     font-weight: 700;
 
 }
+.smallBtn:active{
+    background-color: yellow;
+}
 
 @media(min-width:500px){
     .cardContainer{

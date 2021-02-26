@@ -16,27 +16,27 @@ const Card = (props) => {
     const item=props.item;  
 //updates list items and total in order when press the agregar button 
     const upOrder=()=>{
-        // if(item.quantity !==0){
-        //     if(order.includes(item)){
-        //         let i = order.indexOf(item);
-        //         order.splice(i,1)
-        //     }
-        //     order.push(item)
-        // }
-        if(order.lenght > 0){
-            order.forEach(
-            itemOrder=> { 
-                if(itemOrder.id === item.id){
-                    itemOrder.quantity = item.quantity;
-                }
-                else{
-                    order.push(item)
-                }
+        if(item.quantity !==0){
+            if(order.includes(item)){
+                let i = order.indexOf(item);
+                order.splice(i,1)
             }
-        )
-            
+            order.push(item)
         }
-        getTotal()
+        // if(order.length > 0){
+        //     order.forEach(
+        //     itemOrder=> { 
+        //         if(itemOrder.id === item.id){
+        //             let i= order.indexOf(itemOrder);
+        //             order.splice(i,1)
+        //         }
+        //         order.push(item)
+                
+        //     }
+        // )
+            
+        // }
+        getTotal(order)
         // console.log(order, "total ", useOrder.total) 
     }
  //states tha keeps the quantiti on items 
@@ -56,7 +56,7 @@ const Card = (props) => {
 
         if(i!== -1){order.splice(i,1)};
 
-        getTotal()   
+        getTotal(order)   
      }
 
 
@@ -83,13 +83,20 @@ const Card = (props) => {
                 <p>{item.quantity}</p>
                 <button onClick={()=>addOne()}>+</button>
             </div>
+            
             <div className="btnAdd">
-                <button onClick={()=>{
-                    upOrder();
-                                    // props.hf()
-                                }} 
-                                    className= 'smallBtn'>{props.action}
-                </button>
+            {item.quantity === 0?
+            <button disabled 
+            className= 'smallBtn'>{props.action}
+            </button>
+            :
+            <button onClick={()=>upOrder()} 
+                className= 'smallBtn'>{props.action}
+            </button>
+
+        
+        }
+                
             </div>
         </div>
      );

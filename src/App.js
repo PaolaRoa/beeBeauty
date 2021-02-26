@@ -31,27 +31,29 @@ useOrder.order= order;
 //////////////prueba----------------------------------------------------
 
 
-const [Stotal, setStotal] = useState(useOrder().total)
+const [Stotal, setStotal] = useState(useOrder.total)
     useOrder().total =Stotal;
         //function that sets total
-        useOrder.getTotal=()=>{
-        // let t=0;
+        useOrder.getTotal=(orderUp)=>{
+        let t=0;
         //if are items in the order array define de total
-        if(order.length > 0)
-       {order.forEach(
+      if(orderUp.length > 0)
+       {orderUp.forEach(
             item=> {
                 
                 let subtotal = item.quantity * item.price;
-                // t += subtotal;
-                setStotal(Stotal+subtotal)   
+                t += subtotal;
+                // setStotal(Stotal+subtotal)   
             }
-        )}
+        )
+        setStotal(t)
+      }
         //if order array hasn't items the total is $0
-        else{
-            setStotal(0);
-        }}
+        // else{
+        //     setStotal(0);
+        // }
+      }
 
-    console.log(useOrder.getTotal)
 
 
   
