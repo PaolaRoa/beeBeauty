@@ -56,16 +56,7 @@ useOrder.getTotal=()=>{
 
 
   
-//fin prueba---------------------------------------------------------------------------------------------
 
-
-
-// //creates a quantity property for every item
-//  useQuantity().products.map(cat => cat.items.map
-//   (item=>(
-//     item.quantity=0
-//     )));
-// //PRUEBA FOOTER RECARGUE
 
 
 
