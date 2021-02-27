@@ -10,6 +10,7 @@ const Card = (props) => {
 
     let {order} = useOrder;
     const {getTotal} = useOrder;
+    
  //item prop coming from home or Cart
     const item=props.item;  
 
@@ -50,6 +51,7 @@ const Card = (props) => {
     }
 //function to remove the item and updates the total when button X is clicked 
     const removeItem=()=>{
+        console.log("click")
         setQuantity(0);
         let i = order.indexOf(item);
         if(i!== -1){order.splice(i,1)};
@@ -60,6 +62,7 @@ const Card = (props) => {
     //price to string to add a point
     let price = item.price.toString();
     // console.log(Card.key)
+    
     return ( 
         <div className="card">
             <div className="photo">
@@ -88,14 +91,6 @@ const Card = (props) => {
             
         
             } 
-           
-
-            {/* <button onClick={()=>upOrder()}
-            
-                
-                className= 'smallBtn'>{props.action}
-            </button> */}
-                
             </div>
         </div>
      );
