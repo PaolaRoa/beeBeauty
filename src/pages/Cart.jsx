@@ -3,13 +3,8 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import back from '../images/back.png'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
     Link
   } from "react-router-dom";
-  import {products} from '../data/products.json'
-  import CardContainer from '../components/CardContainer';
   import Card from '../components/Card';
   import useOrder from '../components/hooks/useOrder'
 
@@ -17,16 +12,14 @@ import {
 
 const Cart = () => {
 
-    const [f, setf] = useState(false);
-    const hf = ()=>{
-        setf(!f)
-    }
     //keeps the order to render the cards on the cart page
-    const [order, setorder] = useState(useOrder.order);
-    useOrder.order= order;
-    console.log(order)
+    // const [order, setorder] = useState(useOrder.order);
+    // useOrder.order= order;
+    // console.log(order)
     let total = useOrder().total;
     // build whatsapp string
+    const {order} = useOrder;
+
     let waMsj='';
     const waString=()=>{
         let str = '';
@@ -51,19 +44,18 @@ const Cart = () => {
                 <img src={back} alt="" className="rrss"/>
             </button>                
         </Link>
-    const btnWa = <p>finalizar</p>
     return ( 
         <>
             <Header title='Carrito' btn={btn}/>
             <div className="cardContainer">
                 {
                 order.map((item=>
-                        <Card key={item.id} item={item} btnValue="x" action="Actualizar" hf={hf}/>
+                        <Card key={item.id} item={item} btnValue="x" action="Actualizar" />
                         )
                     )
                 }
             </div>
-            <Footer f={f} goto= {waString()} delivery= "Domicilio: $2000" buttonValue ='finalizar' total= {total}/>
+            <Footer goto= {waString()} delivery= "Domicilio: $2000" buttonValue ='finalizar' total={total}/>
         </>
      );
 }

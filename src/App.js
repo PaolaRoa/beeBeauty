@@ -12,7 +12,7 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import useQuantity from './components/hooks/useQuantity';
 import useOrder from './components/hooks/useOrder';
-import Categories from './components/Categories';
+
 
 
 
@@ -30,24 +30,23 @@ useOrder.order= order;
 
 //////////////prueba----------------------------------------------------
 
-
-const [Stotal, setStotal] = useState(useOrder.total)
-    useOrder().total =Stotal;
+let {total}= useOrder()
+const [Stotal, setStotal] = useState(useOrder().setTotal())
+useOrder().total =Stotal;
         //function that sets total
-        useOrder.getTotal=(orderUp)=>{
-        let t=0;
-        //if are items in the order array define de total
-      if(orderUp.length > 0)
-       {orderUp.forEach(
-            item=> {
-                
+let t = 0;
+useOrder.getTotal=()=>{
+       if(order!==undefined)
+         { 
+           order.forEach(
+              item=> {
                 let subtotal = item.quantity * item.price;
-                t += subtotal;
-                // setStotal(Stotal+subtotal)   
+                t += subtotal
             }
         )
-        setStotal(t)
+        console.log(Stotal, total, t, order)
       }
+      setStotal(t)
         //if order array hasn't items the total is $0
         // else{
         //     setStotal(0);

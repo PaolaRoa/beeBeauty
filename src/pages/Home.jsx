@@ -12,10 +12,7 @@ import useOrder from '../components/hooks/useOrder';
 
 
 const Home = () => {
-    const [f, setf] = useState(false);
-    const hf = ()=>{
-        setf(!f)
-    }
+
 
     //asign the products object that is saved in quantity context
     const products = useQuantity().products
@@ -29,7 +26,6 @@ const Home = () => {
     }    
     let total = useOrder().total;
 
-    console.log(hf)
 
 
 
@@ -46,7 +42,7 @@ const Home = () => {
                         <Card key={item.id} 
                         btnValue="" action="Agregar"
                         item={item}
-                        hf={hf}
+                 
                         />
 
                         )
@@ -59,13 +55,12 @@ const Home = () => {
                     <Card key={item.id} 
                         btnValue=""
                         item={item} action="Agregar"
-                        hf={hf}
                         />
                     )
                 }
             </div>
             {/* renders footer passing like route cart and value ver carrito */}
-            <Footer goto='/cart' buttonValue='ver carrito' total={total} f={f}/>
+            <Footer goto='/cart' buttonValue='ver carrito' total={total}/>
         </>
      );
 }

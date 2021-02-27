@@ -98,6 +98,9 @@
 .smallBtn:active{
     background-color: yellow;
 }
+.smallBtn:disabled{
+    background-color: #f8a84cbf;
+}
 
 @media(min-width:500px){
     .cardContainer{

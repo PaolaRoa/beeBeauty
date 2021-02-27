@@ -12,6 +12,7 @@ import useQuantity from './hooks/useQuantity';
 
 
 const Footer = (props) => {
+    
 
 
     return (
