@@ -8,25 +8,40 @@ import useOrder from './hooks/useOrder'
 
 const Card = (props) => {
 
-    const {order, ordertotal} = useOrder();
+    let {order} = useOrder;
+    const {getTotal} = useOrder;
+    
  //item prop coming from home or Cart
     const item=props.item;  
+
+// function itemOrder(){
+//     let f =order.filter(
+//         itemO => (item.id === itemO.id)
+//     )
+//     return f[0].quantity
+// }
+// console.log(itemOrder())
 //updates list items and total in order when press the agregar button 
     const upOrder=()=>{
         if(item.quantity !==0){
-            if(useOrder.order.includes(item)){
-                let i = useOrder.order.indexOf(item);
-                useOrder.order.splice(i,1)
+            if(order.includes(item)){
+                let i = order.indexOf(item);
+                order.splice(i,1)
             }
-            useOrder.order.push(item)
-
+            order.push(item)
         }
         getTotal()
-        console.log(useOrder.order) 
+        setcompareQ(quantity)
     }
  //states tha keeps the quantiti on items 
     const [quantity, setQuantity] = useState(item.quantity);
     item.quantity = quantity;
+
+    const [compareQ, setcompareQ] = useState(quantity)
+
+    console.log(compareQ === quantity)
+
+
 //fuctions to setquantities with the + and - buttons
     const subsOne = ()=> {
         if(quantity!==0)setQuantity(quantity-1);        
@@ -36,40 +51,17 @@ const Card = (props) => {
     }
 //function to remove the item and updates the total when button X is clicked 
     const removeItem=()=>{
-        setQuantity(0);
-        let i = useOrder.order.indexOf(item);
+        console.log("click")
+        // setQuantity(0);
+        // let i = order.indexOf(item);
+        // if(i!== -1){order.splice(i,1)};
+     }
 
-        if(i!== -1){useOrder.order.splice(i,1)};
 
-        getTotal()    }
-//function that calculates the total
-    //state total equals to context total
-    const [total, settotal] = useState(useOrder().total)
-    useOrder().total =total;
-        //function that sets total
-    const getTotal=()=>{
-        let t=0;
-        //if are items in the order array define de total
-        if(useOrder.order.length > 0)
-       {useOrder.order.forEach(
-            item=> {
-                
-                let subtotal = item.quantity * item.price;
-                t += subtotal;
-                console.log(t)
-                settotal(t)   
-            }
-        )}
-        //if order array hasn't items the total is $0
-        else{
-            settotal(0);
-        }}
-    console.log(total)
-    //asigns the function gettotal to context settotal value
-    useOrder.settotal=()=>getTotal()
 
     //price to string to add a point
     let price = item.price.toString();
+    // console.log(Card.key)
     
     return ( 
         <div className="card">
@@ -90,8 +82,15 @@ const Card = (props) => {
                 <p>{item.quantity}</p>
                 <button onClick={()=>addOne()}>+</button>
             </div>
+            
             <div className="btnAdd">
-                <button onClick={()=>upOrder() } className= 'smallBtn'>{props.action}</button>
+            {compareQ === quantity? 
+            <button onClick={()=>upOrder()}className= 'smallBtn' disabled >{props.action}  </button>
+                :
+            <button onClick={()=>upOrder()}className= 'smallBtn'>{props.action}</button>
+            
+        
+            } 
             </div>
         </div>
      );

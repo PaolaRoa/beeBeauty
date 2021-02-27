@@ -12,6 +12,8 @@ import useOrder from '../components/hooks/useOrder';
 
 
 const Home = () => {
+
+
     //asign the products object that is saved in quantity context
     const products = useQuantity().products
     //create state to manipulate the selected categorie with an object
@@ -21,8 +23,11 @@ const Home = () => {
     const catSelector = (items)=>{
         // console.log(items)
         setcategorie(items);
-    }
-    
+    }    
+    let total = useOrder().total;
+
+
+
 
     return ( 
         <>
@@ -37,6 +42,7 @@ const Home = () => {
                         <Card key={item.id} 
                         btnValue="" action="Agregar"
                         item={item}
+                 
                         />
 
                         )
@@ -54,7 +60,7 @@ const Home = () => {
                 }
             </div>
             {/* renders footer passing like route cart and value ver carrito */}
-            <Footer goto='/cart' buttonValue='ver carrito' />
+            <Footer goto='/cart' buttonValue='ver carrito' total={total}/>
         </>
      );
 }
