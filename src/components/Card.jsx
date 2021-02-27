@@ -52,9 +52,9 @@ const Card = (props) => {
 //function to remove the item and updates the total when button X is clicked 
     const removeItem=()=>{
         console.log("click")
-        setQuantity(0);
-        let i = order.indexOf(item);
-        if(i!== -1){order.splice(i,1)};
+        // setQuantity(0);
+        // let i = order.indexOf(item);
+        // if(i!== -1){order.splice(i,1)};
      }
 
 
