@@ -8,6 +8,9 @@ body{
     background-size: cover;
     font-family: 'Lato', sans-serif;
     color: rgb(12, 12, 12);
+    overflow-y: hidden;
+
+
 }
 body:before {
 	content:'';
@@ -78,7 +81,7 @@ h2{
     margin:20px;
 }
 footer{
-    position:absolute ;
+    position: fixed ;
    bottom: 0px;
    background-color: white;
    width: 100%;
