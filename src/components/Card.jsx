@@ -60,7 +60,7 @@ const Card = (props) => {
 
 
     //price to string to add a point
-    let price = item.price.toString();
+    // let price = item.price.toString();
     // console.log(Card.key)
     
     return ( 
@@ -75,7 +75,7 @@ const Card = (props) => {
                 <p>{item.description}</p>
             </div>
             <div className="pCost"> 
-                <h4>${price}</h4>
+                <h4>${item.price}</h4>
             </div>
             <div className="pAdd">
                 <button onClick= {()=>subsOne()}>-</button>

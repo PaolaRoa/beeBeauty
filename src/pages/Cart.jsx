@@ -52,6 +52,7 @@ const Cart = () => {
     return ( 
         <>
             <Header title='Carrito' btn={btn}/>
+            <p className="msj">Al finalizar te enviaremos a la app de whatsapp para acordar la entrega y pago de tu pedido</p>
             <div className="cardContainer">
                 {
                 order.map((item=>
