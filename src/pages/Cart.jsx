@@ -19,7 +19,10 @@ const Cart = () => {
     let total = useOrder().total;
     // build whatsapp string
     const {order} = useOrder;
-    let totalDom = total+6500;
+    let totalDom =total;
+
+    total>0?totalDom = total+6500:totalDom = total;
+   
 
     let waMsj='';
     const waString=()=>{
