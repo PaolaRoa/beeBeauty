@@ -115,5 +115,16 @@ btnIcon{
     font-size: 14px;
     color: black;
 }
-
+.emptyCart{
+    background-color: white;
+    margin: 20px;
+    margin-top: 10vh;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 15%)
+}
 /*card styles */
+.emptyCart > h3{
+    font-family: 'Federo';
+    color:rgb(0, 0, 0);
+}

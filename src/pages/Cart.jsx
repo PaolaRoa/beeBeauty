@@ -52,14 +52,29 @@ const Cart = () => {
     return ( 
         <>
             <Header title='Carrito' btn={btn}/>
-            <p className="msj">Al finalizar te enviaremos a la app de whatsapp para acordar la entrega y pago de tu pedido</p>
+            {order.length>0?<p className="msj">Al finalizar te enviaremos a la app de whatsapp para acordar la entrega y pago de tu pedido</p>
+            :
+            null
+            }
             <div className="cardContainer">
-                {
-                order.map((item=>
-                        <Card key={item.id} item={item} btnValue="x" action="Actualizar" />
+                {order.length===0?
+                   <div className="emptyCart">
+                       <h3>Tu carrito esta vacio</h3>
+                       <p>Vuelve a la tienda y escoge algunos productos, o escribenos si no encuentras lo que buscabas</p>
+                       <Link to='/home'>
+                             <button className= 'actionBtn'>ir a la tienda</button>                
+                        </Link>
+                   </div>
+                :
+                    order.map((item=>
+                            <Card key={item.id} item={item} btnValue="x" action="Actualizar" />
+                            )
                         )
-                    )
+                    
                 }
+                
+
+               
             </div>
             <Footer goto= {waString()} delivery= "Domicilio: $6500" buttonValue ='finalizar' total={totalDom}/>
         </>

@@ -12,8 +12,8 @@ import useQuantity from './hooks/useQuantity';
 
 
 const Footer = (props) => {
-    
-
+     let total=0;
+   isNaN(props.total)? total=0:total=props.total;
 
     return (
         <footer>
@@ -21,7 +21,8 @@ const Footer = (props) => {
                 {/* shows the delivery value */}
                 <p>{props.delivery}</p>
                 {/* shows the total saved in order context*/}
-                <h3>Total: ${props.total}</h3>
+      
+                <h3 className='total'>Total: ${total}</h3>
             </div>
             {/* conditional because if the route isn't /cart means that the button is clicked 
             from cart component so the url is whatsapp url not a componnent  */}
@@ -34,6 +35,7 @@ const Footer = (props) => {
          <a href={props.goto}>
          <button className= 'actionBtn'>{props.buttonValue}</button>
          </a>
+        
             }
         </footer>
     );
