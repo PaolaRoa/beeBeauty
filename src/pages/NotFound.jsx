@@ -12,8 +12,8 @@ import useOrder from '../components/hooks/useOrder';
 
 
 const NotFound = () => {
-
-    let total = useOrder().total;
+//this doesn´t work because to get this page the url must be manipulate from direction bar and that makes the app restart
+    let total = useOrder.total;
   return ( 
         <>
             <Header title='Inicio' btn=''/>
@@ -26,6 +26,5 @@ const NotFound = () => {
         </>
      );
 }
- 
 export default NotFound;
 

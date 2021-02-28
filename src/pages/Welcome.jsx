@@ -1,15 +1,10 @@
-import react from "react";
 import "../css/welcome.css"
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
 
 const Welcome = () => {
-
     return ( 
         <>
             <div className="container">

@@ -1,6 +1,5 @@
 import React, {useState}from 'react';
 import '../css/card.css'
-// import QuantityBtn from './QuantityBtn';
 import useOrder from './hooks/useOrder'
 
 

@@ -1,16 +1,14 @@
-import React, {createContext, useContext, useState} from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import Welcome from './pages/Welcome';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
-import useQuantity from './components/hooks/useQuantity';
 import useOrder from './components/hooks/useOrder';
 import NotFound from './pages/NotFound';
 
@@ -18,25 +16,22 @@ import NotFound from './pages/NotFound';
 
 
 function App() {
-
-
 //states that keep the order 
 const [order, setOrder] = useState([])
-
-// setOrder(useOrder().order);
-
 //inicialize the order
 useOrder.setOrder = setOrder;
 useOrder.order= order;
-
-//////////////prueba----------------------------------------------------
-
-let {total}= useOrder()
+//get the total from context
+let {total}= useOrder();
+//state to keep the total and inicializes with total from context
 const [Stotal, setStotal] = useState(useOrder().setTotal())
+//equals the total from context from total from state
 useOrder().total =Stotal;
-        //function that sets total
+//defines t to store the total
 let t = 0;
+//function that sets total from context
 useOrder.getTotal=()=>{
+  //if order has items the for every item gets a subtotal and add it to t
        if(order!==undefined)
          { 
            order.forEach(
@@ -45,23 +40,10 @@ useOrder.getTotal=()=>{
                 t += subtotal
             }
         )
-        console.log(Stotal, total, t, order)
       }
+      //set the total state with t that is the sum of subtotales
       setStotal(t)
-        //if order array hasn't items the total is $0
-        // else{
-        //     setStotal(0);
-        // }
       }
-
-
-
-  
-
-
-
-
-
 
 
   return (
@@ -83,5 +65,4 @@ useOrder.getTotal=()=>{
       </Router>
   )
 }
-
 export default App;
