@@ -78,7 +78,7 @@ const Cart = () => {
                 }         
             </div>
             {/* pass the url to whatsapp to dfooter and the value o domicilio button and the total */}
-            <Footer goto= {waString()} delivery= "Domicilio: $6500" buttonValue ='finalizar' total={totalDom}/>
+            <Footer goto= {waString()} delivery= "Domicilio en Bogotá: $6500" buttonValue ='finalizar' total={totalDom}/>
         </>
      );
 }

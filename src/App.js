@@ -22,7 +22,6 @@ const [order, setOrder] = useState([])
 useOrder.setOrder = setOrder;
 useOrder.order= order;
 //get the total from context
-let {total}= useOrder();
 //state to keep the total and inicializes with total from context
 const [Stotal, setStotal] = useState(useOrder().setTotal())
 //equals the total from context from total from state
