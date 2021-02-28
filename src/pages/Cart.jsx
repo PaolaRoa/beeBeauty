@@ -37,7 +37,7 @@ const Cart = () => {
         waS=  waS.replace(/ /g, '%20');
        ;
       
-        waMsj=`${waS}%20Total:%20$${totalDom}`
+        waMsj=`${waS}%20Total%20con%20domicilio:%20$${totalDom}`
         console.log(order)
         return waMsj;
     
