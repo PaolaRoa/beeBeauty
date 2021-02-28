@@ -10,6 +10,14 @@ permite realizar pedidos que se envian al whatsapp de la tienda
 
 1. Crea una carpeta vacia donde quieras guardar el código.
 
+2. Abre la carpeta en la terminal.
+
+3. Ejecuta el comando git clone https://github.com/PaolaRoa/beeBeauty.git .
+
+4. Ejecuta el comando npm install
+
+5. Ejecuta el comando npm install react-router-dom
+
 To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### Code Splitting
