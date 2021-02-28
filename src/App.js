@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import Cart from './pages/Cart';
 import useQuantity from './components/hooks/useQuantity';
 import useOrder from './components/hooks/useOrder';
+import NotFound from './pages/NotFound';
 
 
 
@@ -65,6 +66,7 @@ useOrder.getTotal=()=>{
 
   return (
       <Router>
+        <Switch>
         <Route exact path="/">
           <Welcome />
         </Route>
@@ -74,6 +76,10 @@ useOrder.getTotal=()=>{
         <Route path="/cart">
           <Cart />
         </Route>
+        <Route>
+          <NotFound />
+        </Route>
+        </Switch>
       </Router>
   )
 }
