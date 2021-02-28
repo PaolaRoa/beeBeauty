@@ -52,7 +52,7 @@
           "id":"M026",
           "name":"Paleta Beauty Glazed",
           "description":"Paleta con 63 tonos de sombras para ojos",
-          "price":15000,
+          "price":75000,
           "img":"../images/sombra4.png",
           "quantity":0
         } 
@@ -116,7 +116,7 @@
           "id":"M022",
           "name":"Pestañina doble ",
           "description":"Pestañina con paso 1: Primer y paso 2: Pestañina",
-          "price":22000,
+          "price":20000,
           "img":"../images/eyes2.png",
           "quantity":0
         }
