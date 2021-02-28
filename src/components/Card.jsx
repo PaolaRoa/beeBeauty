@@ -8,21 +8,15 @@ import useOrder from './hooks/useOrder'
 
 const Card = (props) => {
 
+//using context order and function to set total
     let {order} = useOrder;
-    const {getTotal} = useOrder;
-    
+    const {getTotal} = useOrder;   
  //item prop coming from home or Cart
     const item=props.item;  
 
-// function itemOrder(){
-//     let f =order.filter(
-//         itemO => (item.id === itemO.id)
-//     )
-//     return f[0].quantity
-// }
-// console.log(itemOrder())
 //updates list items and total in order when press the agregar button 
     const upOrder=()=>{
+        //just allow to add item if quantity isn't o
         if(item.quantity !==0){
             if(order.includes(item)){
                 let i = order.indexOf(item);
@@ -30,17 +24,15 @@ const Card = (props) => {
             }
             order.push(item)
         }
+        //after update order set total and compare quantity
         getTotal()
         setcompareQ(quantity)
     }
  //states tha keeps the quantiti on items 
     const [quantity, setQuantity] = useState(item.quantity);
     item.quantity = quantity;
-
+//this state is to inactivate the agregar button if the quantity doesn't change
     const [compareQ, setcompareQ] = useState(quantity)
-
-
-
 //fuctions to setquantities with the + and - buttons
     const subsOne = ()=> {
         if(quantity!==0)setQuantity(quantity-1);        
@@ -50,18 +42,12 @@ const Card = (props) => {
     }
 //function to remove the item and updates the total when button X is clicked 
     const removeItem=()=>{
-       
+       //sets item quantity on 0 and updates the total
         setQuantity(0);
         let i = order.indexOf(item);
         if(i!== -1){order.splice(i,1)};
         getTotal()
      }
-
-
-
-    //price to string to add a point
-    // let price = item.price.toString();
-    // console.log(Card.key)
     
     return ( 
         <div className="card">
@@ -84,12 +70,11 @@ const Card = (props) => {
             </div>
             
             <div className="btnAdd">
+            {/* if quantiti hasn´t change renders a disabled button */}
             {compareQ === quantity? 
             <button onClick={()=>upOrder()}className= 'smallBtn' disabled >{props.action}  </button>
                 :
             <button onClick={()=>upOrder()}className= 'smallBtn'>{props.action}</button>
-            
-        
             } 
             </div>
         </div>
