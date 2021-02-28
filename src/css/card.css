@@ -1,6 +1,7 @@
 .cardContainer{
     height: 65vh;
     overflow-y: scroll;
+    padding-bottom: 100px;
 }
 .card {
     display: grid;
