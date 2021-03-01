@@ -14,7 +14,6 @@ const Cart = () => {
 
     // assigns total from context on a variable
     let total = useOrder().total;
-    // build whatsapp string
     //get order from context
     const {order} = useOrder;
     //sets the total initially on total
@@ -22,7 +21,7 @@ const Cart = () => {
     //if total is 0 then don't add the delivery value
     total>0?totalDom = total+6500:totalDom = total;
    //sets the variable to save the string to add to whatsapp url
-    let waMsj='';
+    let whatsappMessage='';
     //function tha builds the whatsapp url
     const waString=()=>{
         let str = '';
@@ -34,14 +33,14 @@ const Cart = () => {
         }   
         )
         //add the string to whatsapp url
-        let waS = `https://wa.me/573214845851?text=${str}`
+        let waRawUrl = `https://wa.me/573052946927?text=${str}`
         //replaces all spaces for %20 that is a space in url
-        waS=  waS.replace(/ /g, '%20');
+        waRawUrl=  waRawUrl.replace(/ /g, '%20');
        ;
         //set the url with the total
-        waMsj=`${waS}%20Total%20con%20domicilio:%20$${totalDom}`
+        whatsappMessage=`${waRawUrl}%20Total%20con%20domicilio:%20$${totalDom}`
         //returns the url 
-        return waMsj;   
+        return whatsappMessage;   
     }
     //creates the button to go back home, this btn is sending by props to footer component
     const btn = 
