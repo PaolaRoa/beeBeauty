@@ -32,12 +32,12 @@ const Footer = (props) => {
             from cart component so the url is whatsapp url not a componnent  */}
             {props.goto ==='/cart'?
              <Link to={props.goto}>
-             <button className= 'actionBtn'>{props.buttonValue}</button>
+             <button type="button" className= 'actionBtn'>{props.buttonValue}</button>
          </Link>
          :
         //  if its no cart then put the button in an a tag making ref to whatsapp url
          <a href={props.goto}>
-         <button className= 'actionBtn'>{props.buttonValue}</button>
+         <button type="button" className= 'actionBtn'>{props.buttonValue}</button>
          </a>
             }
         </footer>

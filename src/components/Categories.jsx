@@ -11,11 +11,11 @@ const Categories = (props) => {
         <div className="catContainer">
             <ul>
                 {/* this button shows all products setting the products state with products array */}
-                <li><button className='catBtn' onClick = {(e)=>{props.catSelector(products)}}>Todo</button></li>
+                <li><button type="button" className='catBtn' onClick = {(e)=>{props.catSelector(products)}}>Todo</button></li>
                 {/* maps the products array and generates a button for every categorie */}
                 {products.map(categorie =>(
                     <li key= {products.indexOf(categorie)} >
-                        <button className='catBtn' onClick={(e)=>{props.catSelector(categorie.items);}}>{categorie.cname}</button>
+                        <button type="button" className='catBtn' onClick={(e)=>{props.catSelector(categorie.items);}}>{categorie.cname}</button>
                     </li>
                 )
                 )}

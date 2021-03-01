@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import back from '../images/back.png'
@@ -48,7 +48,7 @@ const Cart = () => {
     //creates the button to go back home, this btn is sending by props to footer component
     const btn = 
         <Link to='/home'>
-            <button className= 'backBtn'>
+            <button  type="button" className= 'backBtn'>
                 <img src={back} alt="" className="rrss"/>
             </button>                
         </Link>
@@ -68,7 +68,7 @@ const Cart = () => {
                        <h3>Tu carrito esta vacio</h3>
                        <p>Vuelve a la tienda y escoge algunos productos, o escríbenos si no encuentras lo que buscabas</p>
                        <Link to='/home'>
-                             <button className= 'actionBtn'>ir a la tienda</button>                
+                             <button type="button" className= 'actionBtn'>ir a la tienda</button>                
                         </Link>
                    </div>
                 :

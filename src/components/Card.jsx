@@ -63,7 +63,7 @@ const Card = (props) => {
                 <img src={`${item.img}`} alt="product" className='pimg'/>
             </div>
             <div className="pName">
-                <h3>{item.name}</h3><button onClick={()=>{removeItem()}}>{props.btnValue}</button>
+                <h3>{item.name}</h3><button type="button" onClick={()=>{removeItem()}}>{props.btnValue}</button>
             </div>
             <div className="pDescription">
                 <p>{item.description}</p>
@@ -72,17 +72,17 @@ const Card = (props) => {
                 <h4>{price}</h4>
             </div>
             <div className="pAdd">
-                <button onClick= {()=>subsOne()}>-</button>
+                <button type="button" onClick= {()=>subsOne()}>-</button>
                 <p>{item.quantity}</p>
-                <button onClick={()=>addOne()}>+</button>
+                <button type="button" onClick={()=>addOne()}>+</button>
             </div>
             
             <div className="btnAdd">
             {/* if quantiti hasn´t change renders a disabled button */}
             {compareQ === quantity? 
-            <button onClick={()=>upOrder()}className= 'smallBtn' disabled >{props.action}  </button>
+            <button type="button" onClick={()=>upOrder()}className= 'smallBtn' disabled >{props.action}  </button>
                 :
-            <button onClick={()=>upOrder()}className= 'smallBtn'>{props.action}</button>
+            <button type="button" onClick={()=>upOrder()}className= 'smallBtn'>{props.action}</button>
             } 
             </div>
         </div>
