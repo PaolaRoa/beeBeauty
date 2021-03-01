@@ -34,7 +34,7 @@ const Cart = () => {
         )
         //add the string to whatsapp url
         let waRawUrl = `https://wa.me/573052946927?text=${str}`
-        //replaces all spaces for %20 that is a space in url
+        //replaces all spaces for %20 that is a space in 
         waRawUrl=  waRawUrl.replace(/ /g, '%20');
        ;
         //set the url with the total
