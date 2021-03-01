@@ -104,6 +104,20 @@
 }
 
 @media(min-width:500px){
+    header{
+        height: 100px;
+    }
+    .rrss{
+        height: 3vw;
+        width: 3vw;
+    }
+    .logoSmall{
+        height: 130px;
+        width: auto;
+        padding: 10px;
+        margin: 10px;
+
+    }
     .cardContainer{
         display: flex;
         flex-wrap: wrap;
@@ -135,5 +149,12 @@
         font-size: 18px;
         margin: 0 20px 0px 20px;
         text-align: left;
+    }
+    .msj{
+        font-size: 24px;
+    }
+    .emptyCart{
+        font-size: 32px;
+        padding: 50px;
     }
 }

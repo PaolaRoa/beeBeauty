@@ -54,7 +54,7 @@ const Cart = () => {
             {/* pass to header the title */}
             <Header title='Carrito' btn={btn}/>
             {/* if order isn't empty then renders a msj */}
-            {order.length>0?<p className="msj">Al finalizar te enviaremos a la app de whatsapp para acordar la entrega y pago de tu pedido</p>
+            {order.length>0?<p className="msj">Al finalizar te enviaremos a la aplicación de whatsapp para acordar la entrega y pago de tu pedido</p>
             :
             null
             }
@@ -63,7 +63,7 @@ const Cart = () => {
                 {order.length===0?
                    <div className="emptyCart">
                        <h3>Tu carrito esta vacio</h3>
-                       <p>Vuelve a la tienda y escoge algunos productos, o escribenos si no encuentras lo que buscabas</p>
+                       <p>Vuelve a la tienda y escoge algunos productos, o escríbenos si no encuentras lo que buscabas</p>
                        <Link to='/home'>
                              <button className= 'actionBtn'>ir a la tienda</button>                
                         </Link>
