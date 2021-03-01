@@ -95,7 +95,7 @@ Tienes varias opciones para hacer deploy de tu aplicación de manera gratuita, a
 2. Hacer deploy en [Github Pages](https://platzi.com/tutoriales/1548-react/4065-guia-para-usar-github-pages-en-tus-proyectos-de-reactjs/).
 3. Hacer deploy en [Netlify](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/).
 
-##Licencia
+## Licencia :scroll:
 
 Este proyecto está bajo la Licencia MIT License - mira el archivo [LICENSE.md](/LICENSE) para detalles
 
