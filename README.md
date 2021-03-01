@@ -91,7 +91,8 @@ Crea la categoria justo debajo de la última categoria que encuentres, con la es
 
 Tienes varias opciones para hacer deploy de tu aplicación de manera gratuita, aquí te dejare un tutorial para tres de las más populares.
 
-1. Hacer deploy en [Vercel](https://vercel.com/guides/deploying-react-with-vercel-cra) este es tan sencillo que es mi favorito :purple_heart:
+1. Hacer deploy en [Vercel](https://vercel.com/guides/deploying-react-with-vercel-cra) este es tan sencillo que es mi favorito :purple_heart:.
 2. Hacer deploy en [Github Pages](https://platzi.com/tutoriales/1548-react/4065-guia-para-usar-github-pages-en-tus-proyectos-de-reactjs/).
-3. Hacer deploy en [Netlify](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
+3. Hacer deploy en [Netlify](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/).
 
+###Licencia
