@@ -1,12 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import "../css/home.css"
-// import {products} from '../data/products.json';
-// import CardContainer from '../components/CardContainer';
-import Categories from '../components/Categories';
-import Card from '../components/Card';
-import useQuantity from '../components/hooks/useQuantity';
 import useOrder from '../components/hooks/useOrder';
 
 

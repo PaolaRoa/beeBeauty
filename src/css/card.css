@@ -52,7 +52,10 @@
     margin: 0 20px 0px 20px;
     text-align: left;
 }
-.pCost { grid-area: 3 / 1 / 4 / 2; }
+.pCost { 
+    grid-area: 3 / 1 / 4 / 2;
+    margin-top: 10px;
+}
 .pCost > h4{
     margin: 0;
 }

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import "../css/home.css"
 import Categories from '../components/Categories';
 import Card from '../components/Card';
 import useQuantity from '../components/hooks/useQuantity';
