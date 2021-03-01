@@ -23,9 +23,9 @@ Permite crear un catalogo online para realizar pedidos que se envian al whatsapp
 ### !listo! ya tienes el código 
 
 
-:bulb: **[Aquí](https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository) puedes ver mas opciones para clonar este repositorio **
+:bulb: **[Aquí](https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository) puedes ver mas opciones para clonar este repositorio**
 
-:bulb: **Tambien puedes hacer una bifurcación del repositorio en tu perfil de github siguiendo [estos pasos](https://docs.github.com/es/github/getting-started-with-github/fork-a-repo) **
+:bulb: **Tambien puedes hacer una bifurcación del repositorio en tu perfil de github siguiendo [estos pasos](https://docs.github.com/es/github/getting-started-with-github/fork-a-repo)**
 
 ## ¿Cómo agregar productos a la aplicación? :convenience_store:
 
@@ -85,5 +85,5 @@ Guarda tu imagen en la ruta  del proyecto src/images, procura darle a las imagen
 
 Bueno, sigue la estructura del JSON :sweat_smile:
 
-Crea la categoria justo debajo de la última categoria que encuentres, con la estructura que se detallo, recuerda que una categoria va separada de otra por una coma, y dentro de esta categoria coloca los items que contiene.
+Crea la categoria justo debajo de la última categoria que encuentres, con la estructura que se detallo , recuerda que una categoria va separada de otra por una coma, y dentro de esta categoria coloca los items que contiene.
 
