@@ -30,7 +30,7 @@ Permite crear un catalogo online para realizar pedidos que se envian al whatsapp
 ## ¿Cómo agregar productos a la aplicación? :convenience_store:
 
 ### primero, veamos como estan guardados los productos:
-Los productos estan guardados en un archivo JSON, si quieres saber mas sobre los archivos JSON https://www.json.org/json-en.html
+Los productos estan guardados en un archivo JSON, [¿quieres saber mas sobre los archivos JSON?](https://www.json.org/json-en.html)
 
 El archivo donde se almacenan los productos lo encuentras en la ruta src/data/products.json , allí veras que la estructura es la siguiente:
 
@@ -86,4 +86,12 @@ Guarda tu imagen en la ruta  del proyecto src/images, procura darle a las imagen
 Bueno, sigue la estructura del JSON :sweat_smile:
 
 Crea la categoria justo debajo de la última categoria que encuentres, con la estructura que se detallo , recuerda que una categoria va separada de otra por una coma, y dentro de esta categoria coloca los items que contiene.
+
+## Desplegar la aplicación :open_file_folder:
+
+Tienes varias opciones para hacer deploy de tu aplicación de manera gratuita, aquí te dejare un tutorial para tres de las más populares.
+
+1. Hacer deploy en [Vercel](https://vercel.com/guides/deploying-react-with-vercel-cra) este es tan sencillo que es mi favorito :purple_heart:
+2. Hacer deploy en [Github Pages](https://platzi.com/tutoriales/1548-react/4065-guia-para-usar-github-pages-en-tus-proyectos-de-reactjs/).
+3. Hacer deploy en [Netlify](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/)
 
