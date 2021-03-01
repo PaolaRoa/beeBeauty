@@ -108,10 +108,10 @@
 
 @media(min-width:500px){
     header{
-        height: 80px;
+        height: 60px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 80px;
+        grid-template-rows: 60px;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
@@ -140,6 +140,7 @@
         justify-content: center;
         width: 100vw;
         overflow-x: hidden;
+        height: 60vh;
 
     }
     .card{

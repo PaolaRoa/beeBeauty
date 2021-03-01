@@ -15,10 +15,9 @@ const Footer = (props) => {
     let showTotal = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(total));
     // makes point shows on 4 digits price
      if (showTotal.length===6){
-         let totalStr = showTotal.toString();
+        let totalStr = showTotal.toString();
         let firstStr = totalStr.substring(0,3);
         showTotal= firstStr +"." +totalStr.substring(3)
-        console.log(total)
     }   
 
     return (
