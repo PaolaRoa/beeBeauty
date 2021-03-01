@@ -48,12 +48,14 @@ const Card = (props) => {
         getTotal()
      }
 //function to add a point on price
-     function showPrice(price){
-        let priceArr = price.split('');
-        console.log(priceArr[priceArr.length-1])
-     }
      let price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(item.price));
-     console.log(price)
+    // makes point shows on 4 digits price
+     if (price.length===6){
+         let priceStr = price.toString();
+        let firstStr = priceStr.substring(0,3);
+        price = firstStr +"." +priceStr.substring(3)
+        console.log(price)
+    }   
     //  console.log(item.price.NumberFormat("de-DE", {style:"currency", currency:"EUR"}).format(Number) )
     
     return ( 
