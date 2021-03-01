@@ -28,7 +28,7 @@ Los productos estan guardados en un archivo JSON, si quieres saber mas sobre los
 
 El archivo donde se almacenan los productos lo encuentras en la ruta src/data/products.json , allí veras que la estructura es la siguiente:
 
-{"products":[
+{[
     {
       "cname":"Nombre de la categoria",
       "items":[
