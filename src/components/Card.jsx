@@ -47,6 +47,14 @@ const Card = (props) => {
         if(i!== -1){order.splice(i,1)};
         getTotal()
      }
+//function to add a point on price
+     function showPrice(price){
+        let priceArr = price.split('');
+        console.log(priceArr[priceArr.length-1])
+     }
+     let price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(item.price));
+     console.log(price)
+    //  console.log(item.price.NumberFormat("de-DE", {style:"currency", currency:"EUR"}).format(Number) )
     
     return ( 
         <div className="card">
@@ -60,7 +68,7 @@ const Card = (props) => {
                 <p>{item.description}</p>
             </div>
             <div className="pCost"> 
-                <h4>${item.price}</h4>
+                <h4>{price}</h4>
             </div>
             <div className="pAdd">
                 <button onClick= {()=>subsOne()}>-</button>
