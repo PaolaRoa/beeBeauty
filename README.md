@@ -36,7 +36,7 @@ El archivo donde se almacenan los productos lo encuentras en la ruta src/data/pr
            "id":"referencia del producto",
            "name":"nombre del producto",
            "description":"descripcion del producto",
-           "price":12000,//precio del producto
+           "price":12000,
            "img":"../images/nombreDeLaImagen",
            "quantity":0
          },
@@ -44,7 +44,7 @@ El archivo donde se almacenan los productos lo encuentras en la ruta src/data/pr
            "id":"referencia del producto",
            "name":"nombre del producto",
            "description":"descripcion del producto",
-           "price":12000,//precio del producto
+           "price":12000,
            "img":"../images/nombreDeLaImagen",
            "quantity":0
          }
