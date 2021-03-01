@@ -23,3 +23,7 @@ permite realizar pedidos que se envian al whatsapp de la tienda
 ### !listo! ya tienes el código 
 
 ## ¿Cómo agregar productos a la aplicación?
+
+Los productos estan guardados en un archivo JSON, si quieres saber mas sobre los archivos JSON https://www.json.org/json-en.html
+
+El archivo donde se almacenan los productos lo encuentras en la ruta src/data/products.json , 
