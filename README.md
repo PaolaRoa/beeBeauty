@@ -24,6 +24,7 @@ permite realizar pedidos que se envian al whatsapp de la tienda
 
 ## ¿Cómo agregar productos a la aplicación?
 
+### primero, veamos como estan guardados los productos:
 Los productos estan guardados en un archivo JSON, si quieres saber mas sobre los archivos JSON https://www.json.org/json-en.html
 
 El archivo donde se almacenan los productos lo encuentras en la ruta src/data/products.json , allí veras que la estructura es la siguiente:
@@ -53,3 +54,27 @@ El archivo donde se almacenan los productos lo encuentras en la ruta src/data/pr
     }
    ] 
  }
+
+### así  que si lo que quieres es agregar un producto
+
+1.Sigue la estructura del JSON creando un objeto con los datos del nuevo producto en la categoría que consideres}
+
+        {
+          "id":"referencia del producto nuevo",
+          "name":"nombre del nuevo producto",
+          "description":"descripción del producto nuevo",
+          "price":precio del producto nuevo,
+          "img":"../images/productonuevo.png",
+          "quantity":0
+        } 
+        
+        **quantity siempre se asigna en cero ya que es la cantidad inicial que muestra la aplicación
+
+2.Agrega la foto del producto
+        
+Las imagenes deben estar en formato .png o .jpg, procura que las imagenes este optimizadas para la web puedes usar por ejemplo https://imagecompressor.com/es/ o https://tinypng.com/.
+
+Guarda tu imagen en la ruta  del proyecto src/images, procura darle a las imagenes nombres acordes o faciles de escribir, evita usar los nombres por defecto que se asignan al tomar la foto.
+
+
+
