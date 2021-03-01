@@ -54,7 +54,6 @@ const Card = (props) => {
          let priceStr = price.toString();
         let firstStr = priceStr.substring(0,3);
         price = firstStr +"." +priceStr.substring(3)
-        console.log(price)
     }   
     //  console.log(item.price.NumberFormat("de-DE", {style:"currency", currency:"EUR"}).format(Number) )
     
