@@ -97,6 +97,6 @@ Tienes varias opciones para hacer deploy de tu aplicación de manera gratuita, a
 
 ##Licencia
 
-Este proyecto está bajo la Licencia MIT License - mira el archivo [LICENSE.md](/LICENSE.md) para detalles
+Este proyecto está bajo la Licencia MIT License - mira el archivo [LICENSE.md](/LICENSE) para detalles
 
 
