@@ -1,6 +1,6 @@
 # Bee Beauty - Web App para pedidos via whatsapp :iphone:
 
-:computer: Este proyecto fue realizado usando React.js https://es.reactjs.org/
+:computer: Este proyecto fue realizado usando [React.js](https://es.reactjs.org/)
 
 ## ¿que hace esta aplicacion?
 
@@ -23,9 +23,9 @@ Permite crear un catalogo online para realizar pedidos que se envian al whatsapp
 ### !listo! ya tienes el código 
 
 
-#### :bulb: Aquí puedes ver mas opciones para clonar este repositorio https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository
+:bulb: **[Aquí](https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository) puedes ver mas opciones para clonar este repositorio **
 
-#### :bulb: Tambien puedes hacer una bifurcación del repositorio en tu perfil de github siguiendo estos pasos https://docs.github.com/es/github/getting-started-with-github/fork-a-repo
+:bulb: **Tambien puedes hacer una bifurcación del repositorio en tu perfil de github siguiendo [estos pasos](https://docs.github.com/es/github/getting-started-with-github/fork-a-repo) **
 
 ## ¿Cómo agregar productos a la aplicación? :convenience_store:
 
