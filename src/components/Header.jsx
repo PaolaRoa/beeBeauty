@@ -17,7 +17,7 @@ const Header = (props) => {
             {props.btn}
             </h1>   
             {/* links to social network */}
-            <div>
+            <div className="socialContainer">
                 <a href=" https://wa.link/b5oq4r" target='blank'>
                     <img src={wa} alt="logo whatsapp" className="rrss"/>
                 </a> 
