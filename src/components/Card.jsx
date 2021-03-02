@@ -1,4 +1,4 @@
-import React, {useState}from 'react';
+import React, {useState, useEffect}from 'react';
 import '../css/card.css'
 import useOrder from './hooks/useOrder'
 
@@ -34,11 +34,15 @@ const Card = (props) => {
     const [compareQ, setcompareQ] = useState(quantity)
 //fuctions to setquantities with the + and - buttons
     const subsOne = ()=> {
-        if(quantity!==0)setQuantity(quantity-1);        
+        if(quantity!==1)setQuantity(quantity-1);        
     }
     const addOne = ()=>{
         setQuantity(quantity+1);
     }
+//makes the quantity begins in 1 and the button to add be activate at the first render
+useEffect(() => {
+    setQuantity(quantity=> quantity+1);
+  },[]);
 //function to remove the item and updates the total when button X is clicked 
     const removeItem=()=>{
        //sets item quantity on 0 and updates the total
