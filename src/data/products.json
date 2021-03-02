@@ -8,7 +8,7 @@
            "description":"Incluye piñas, moño y flor",
            "price":12000,
            "img":"../images/topos1.png",
-           "quantity":0
+           "quantity":1
          },
          {
           "id":"J005",
@@ -16,7 +16,7 @@
           "description":"Incluye corazón, lazo y flor",
           "price":12000,
           "img":"../images/topos2.png",
-          "quantity":0
+          "quantity":1
         } 
 
       ]
@@ -30,7 +30,7 @@
           "description":"Sombra para ojos con 12 tonos",
           "price":12000,
           "img":"../images/sombra1.png",
-          "quantity":0
+          "quantity":1
         } ,
         {
           "id":"M032",
@@ -38,7 +38,7 @@
           "description":"Sombra para ojos con 9 tonos",
           "price":15000,
           "img":"../images/sombra2.png",
-          "quantity":0
+          "quantity":1
         } ,
         {
           "id":"M031",
@@ -46,7 +46,7 @@
           "description":"Sombra para ojos con 9 tonos",
           "price":15000,
           "img":"../images/sombra3.png",
-          "quantity":0
+          "quantity":1
         } ,
         {
           "id":"M026",
@@ -54,7 +54,7 @@
           "description":"Paleta con 63 tonos de sombras para ojos",
           "price":75000,
           "img":"../images/sombra4.png",
-          "quantity":0
+          "quantity":1
         } 
       ]   
     },
@@ -67,7 +67,7 @@
           "description":"Toníco facial de agua de rosas",
           "price":18000,
           "img":"../images/sk1.png",
-          "quantity":0
+          "quantity":1
         } ,
         {
           "id":"M004",
@@ -75,7 +75,7 @@
           "description":"Mascarilla de hydrogel para ojos",
           "price":20000,
           "img":"../images/sk2.png",
-          "quantity":0
+          "quantity":1
         }
 
       ] 
@@ -88,7 +88,7 @@
         "description":"Exfoliante de labios Klean Color",
         "price":10000,
         "img":"../images/lips1.png",
-        "quantity":0
+        "quantity":1
       } ,
       {
         "id":"M016",
@@ -96,7 +96,7 @@
         "description":"Tinta para labios trendy",
         "price":6000,
         "img":"../images/lips2.png",
-        "quantity":0
+        "quantity":1
       }
 
     ] 
@@ -110,7 +110,7 @@
           "description":"Pestañina de llama trendy",
           "price":15000,
           "img":"../images/eyes1.png",
-          "quantity":0
+          "quantity":1
         } ,
         {
           "id":"M022",
@@ -118,7 +118,7 @@
           "description":"Pestañina con paso 1: Primer y paso 2: Pestañina",
           "price":20000,
           "img":"../images/eyes2.png",
-          "quantity":0
+          "quantity":1
         }
   
       ] 

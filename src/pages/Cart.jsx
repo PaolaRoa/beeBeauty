@@ -16,6 +16,7 @@ const Cart = () => {
     let total = useOrder().total;
     //get order from context
     const {order} = useOrder;
+    console.log(order);
     //sets the total initially on total
     let totalDom =total;
     //if total is 0 then don't add the delivery value
