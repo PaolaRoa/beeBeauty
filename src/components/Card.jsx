@@ -31,18 +31,46 @@ const Card = (props) => {
     const [quantity, setQuantity] = useState(item.quantity);
     item.quantity = quantity;
 //this state is to inactivate the agregar button if the quantity doesn't change
-    const [compareQ, setcompareQ] = useState(quantity)
+    const [compareQ, setcompareQ] = useState(quantity);
+//state to change button status
+    const [btnStatus, setbtnStatus] = useState(false)
+
+    const setBtn=()=>{
+        //boton activado cuando este estado es false
+        if(quantity!== compareQ){
+            setbtnStatus(false)
+        }
+        else{
+            setbtnStatus(true)
+        }
+        console.log(btnStatus)
+    }
+
 //fuctions to setquantities with the + and - buttons
     const subsOne = ()=> {
-        if(quantity!==1)setQuantity(quantity-1);        
+        if(quantity!==1)setQuantity(quantity-1);   
     }
     const addOne = ()=>{
         setQuantity(quantity+1);
     }
-//makes the quantity begins in 1 and the button to add be activate at the first render
+//disables the button if the quantity has no changes and its different from 1
 useEffect(() => {
-    setQuantity(quantity=> quantity+1);
-  },[]);
+    if (compareQ === quantity && quantity!==1 ){
+        setbtnStatus(true)
+    }
+    if(!order.includes(item)){
+    }
+    else{
+        setbtnStatus(true)
+    }
+  }, [compareQ, quantity, order, item],);
+
+// const effectHandler =()=>{
+//     if(quantity === 0 ){
+//         if(!order.includes(item)){
+//             setQuantity(quantity => quantity+1)};
+//         } 
+// }
 //function to remove the item and updates the total when button X is clicked 
     const removeItem=()=>{
        //sets item quantity on 0 and updates the total
@@ -60,6 +88,9 @@ useEffect(() => {
         price = firstStr +"." +priceStr.substring(3)
     }   
     //  console.log(item.price.NumberFormat("de-DE", {style:"currency", currency:"EUR"}).format(Number) )
+    const btnchange=()=>{
+        setbtnStatus(true)
+    }
     
     return ( 
         <div className="card">
@@ -83,15 +114,16 @@ useEffect(() => {
             
             <div className="btnAdd">
             {/* if quantiti hasn´t change renders a disabled button */}
-            {compareQ === quantity? 
-            <button type="button" onClick={()=>upOrder()}className= 'smallBtn' disabled >{props.action}  </button>
+            {compareQ !== quantity? 
+            <button type="button" onClick={()=>{upOrder();btnchange()}}className= 'smallBtn' disabled={false} >{props.action}  </button>
                 :
-            <button type="button" onClick={()=>upOrder()}className= 'smallBtn'>{props.action}</button>
-            } 
+            <button type="button" onClick={()=>{upOrder();btnchange()}}className= 'smallBtn' disabled={btnStatus} >{props.action} </button>
+            }
+            {/* <button type="button" onClick={()=>{upOrder(); setBtn()}}className= 'smallBtn' disabled={btnStatus} >{props.action} </button> */}
+
             </div>
         </div>
      );
 }
-
  
 export default Card;
