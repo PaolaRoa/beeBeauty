@@ -45,7 +45,7 @@ El archivo donde se almacenan los productos lo encuentras en la ruta src/data/pr
           "description":"descripción del producto",
           "price":precio del producto,
           "img":"../images/nombredelaimagen.png",
-          "quantity":0
+          "quantity":1
         } ,
         {
           "id":"referencia del producto (unica para cada producto)",
@@ -53,7 +53,7 @@ El archivo donde se almacenan los productos lo encuentras en la ruta src/data/pr
           "description":"descripción del producto",
           "price":precio del producto,
           "img":"../images/nombredelaimagen.png",
-          "quantity":0
+          "quantity":1
         } 
       ]   
     }
@@ -70,10 +70,10 @@ El archivo donde se almacenan los productos lo encuentras en la ruta src/data/pr
           "description":"descripción del producto nuevo",
           "price":precio del producto nuevo,
           "img":"../images/productonuevo.png",
-          "quantity":0
+          "quantity":1
         } 
         
-        **quantity siempre se asigna en cero ya que es la cantidad inicial que muestra la aplicación
+        **quantity siempre se asigna en uno ya que es la cantidad inicial que muestra la aplicación
 
 2.Agrega la foto del producto :camera:
         
