@@ -1,4 +1,4 @@
-import React, {useState, useEffect}from 'react';
+import React, {useState}from 'react';
 import '../css/card.css'
 import useOrder from './hooks/useOrder'
 
@@ -31,46 +31,14 @@ const Card = (props) => {
     const [quantity, setQuantity] = useState(item.quantity);
     item.quantity = quantity;
 //this state is to inactivate the agregar button if the quantity doesn't change
-    const [compareQ, setcompareQ] = useState(quantity);
-//state to change button status
-    const [btnStatus, setbtnStatus] = useState(false)
-
-    const setBtn=()=>{
-        //boton activado cuando este estado es false
-        if(quantity!== compareQ){
-            setbtnStatus(false)
-        }
-        else{
-            setbtnStatus(true)
-        }
-        console.log(btnStatus)
-    }
-
+    const [compareQ, setcompareQ] = useState(quantity)
 //fuctions to setquantities with the + and - buttons
     const subsOne = ()=> {
-        if(quantity!==1)setQuantity(quantity-1);   
+        if(quantity!==0)setQuantity(quantity-1);        
     }
     const addOne = ()=>{
         setQuantity(quantity+1);
     }
-//disables the button if the quantity has no changes and its different from 1
-useEffect(() => {
-    if (compareQ === quantity && quantity!==1 ){
-        setbtnStatus(true)
-    }
-    if(!order.includes(item)){
-    }
-    else{
-        setbtnStatus(true)
-    }
-  }, [compareQ, quantity, order, item],);
-
-// const effectHandler =()=>{
-//     if(quantity === 0 ){
-//         if(!order.includes(item)){
-//             setQuantity(quantity => quantity+1)};
-//         } 
-// }
 //function to remove the item and updates the total when button X is clicked 
     const removeItem=()=>{
        //sets item quantity on 0 and updates the total
@@ -80,36 +48,14 @@ useEffect(() => {
         getTotal()
      }
 //function to add a point on price
-let price;
-try {
-    price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(item.price));
+     let price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(item.price));
     // makes point shows on 4 digits price
      if (price.length===6){
          let priceStr = price.toString();
         let firstStr = priceStr.substring(0,3);
         price = firstStr +"." +priceStr.substring(3)
-    }  
-} catch (error) {
-    price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", minimumFractionDigits: 0}).format(item.price));
-        // makes point shows on 4 digits price
-        if (price.length===6){
-            let priceStr = price.toString();
-           let firstStr = priceStr.substring(0,3);
-           price = firstStr +"." +priceStr.substring(3) 
-           (console.error(error))}
-}
-
-    //  let price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(item.price));
-    // // makes point shows on 4 digits price
-    //  if (price.length===6){
-    //      let priceStr = price.toString();
-    //     let firstStr = priceStr.substring(0,3);
-    //     price = firstStr +"." +priceStr.substring(3)
-    // }   
+    }   
     //  console.log(item.price.NumberFormat("de-DE", {style:"currency", currency:"EUR"}).format(Number) )
-    const btnchange=()=>{
-        setbtnStatus(true)
-    }
     
     return ( 
         <div className="card">
@@ -133,16 +79,15 @@ try {
             
             <div className="btnAdd">
             {/* if quantiti hasn´t change renders a disabled button */}
-            {compareQ !== quantity? 
-            <button type="button" onClick={()=>{upOrder();btnchange()}}className= 'smallBtn' disabled={false} >{props.action}  </button>
+            {compareQ === quantity? 
+            <button type="button" onClick={()=>upOrder()}className= 'smallBtn' disabled >{props.action}  </button>
                 :
-            <button type="button" onClick={()=>{upOrder();btnchange()}}className= 'smallBtn' disabled={btnStatus} >{props.action} </button>
-            }
-            {/* <button type="button" onClick={()=>{upOrder(); setBtn()}}className= 'smallBtn' disabled={btnStatus} >{props.action} </button> */}
-
+            <button type="button" onClick={()=>upOrder()}className= 'smallBtn'>{props.action}</button>
+            } 
             </div>
         </div>
      );
 }
+
  
 export default Card;
