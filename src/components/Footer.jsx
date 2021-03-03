@@ -12,7 +12,7 @@ const Footer = (props) => {
      //if the total received from props is NaN sets total on 0 else total is total that receives from props
     isNaN(props.total)? total=0:total=props.total;
 
-    let showTotal = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(total));
+    let showTotal = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0, minimumFractionDigits: 0}).format(total));
     // makes point shows on 4 digits price
      if (showTotal.length===6){
         let totalStr = showTotal.toString();

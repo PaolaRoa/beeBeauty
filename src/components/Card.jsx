@@ -80,32 +80,15 @@ useEffect(() => {
         getTotal()
      }
 //function to add a point on price
-let price;
-try {
-    price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(item.price));
+// makes point shows on 4 digits price
+ 
+     let price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0, minimumFractionDigits: 0}).format(item.price));
     // makes point shows on 4 digits price
      if (price.length===6){
          let priceStr = price.toString();
         let firstStr = priceStr.substring(0,3);
         price = firstStr +"." +priceStr.substring(3)
-    }  
-} catch (error) {
-    price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", minimumFractionDigits: 0}).format(item.price));
-        // makes point shows on 4 digits price
-        if (price.length===6){
-            let priceStr = price.toString();
-           let firstStr = priceStr.substring(0,3);
-           price = firstStr +"." +priceStr.substring(3) 
-           (console.error(error))}
-}
-
-    //  let price = (new Intl.NumberFormat("es-CO", {style: "currency", currency: "COP", maximumFractionDigits: 0}).format(item.price));
-    // // makes point shows on 4 digits price
-    //  if (price.length===6){
-    //      let priceStr = price.toString();
-    //     let firstStr = priceStr.substring(0,3);
-    //     price = firstStr +"." +priceStr.substring(3)
-    // }   
+    }   
     //  console.log(item.price.NumberFormat("de-DE", {style:"currency", currency:"EUR"}).format(Number) )
     const btnchange=()=>{
         setbtnStatus(true)
