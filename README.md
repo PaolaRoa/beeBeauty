@@ -77,7 +77,7 @@ El archivo donde se almacenan los productos lo encuentras en la ruta src/data/pr
 
 2.Agrega la foto del producto :camera:
         
-Las imagenes deben estar en formato .png o .jpg, procura que las imagenes este optimizadas para la web puedes usar por ejemplo https://imagecompressor.com/es/ o https://tinypng.com/.
+Las imagenes deben estar en formato .png o .jpg, procura que las imagenes tengan una relación de aspecto 1:1, es decir que sean cuadradas y que esten optimizadas para la web puedes usar por ejemplo https://imagecompressor.com/es/ o https://tinypng.com/.
 
 Guarda tu imagen en la ruta  del proyecto src/images, procura darle a las imagenes nombres acordes o faciles de escribir, evita usar los nombres por defecto que se asignan al tomar la foto.
 
