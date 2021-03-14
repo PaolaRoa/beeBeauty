@@ -97,13 +97,6 @@
         "price":6000,
         "img":"../images/lips2.png",
         "quantity":1
-      },
-      {"id":"999",
-        "name":"labialprueba",
-        "description":"estamos probando",
-        "price":100000,
-        "img":"../images/pruebalabial2.jpg",
-        "quantity":1
       }
     ] 
     },
@@ -126,8 +119,8 @@
           "img":"../images/eyes2.png",
           "quantity":1
         }
-  
       ] 
     }
+
   ]
 }
