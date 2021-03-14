@@ -107,6 +107,19 @@
       }
     ] 
     },
+     {
+      "cname":"nueva categoria",
+      "items":[
+        {
+          "id":"M020",
+          "name":"Pestañina llama",
+          "description":"Pestañina de llama trendy",
+          "price":15000,
+          "img":"../images/eyes1.png",
+          "quantity":1
+        }
+      ] 
+    },
     {
       "cname":"Pestañas y cejas",
       "items":[
@@ -125,9 +138,8 @@
           "price":20000,
           "img":"../images/eyes2.png",
           "quantity":1
-        }
-  
+        }  
       ] 
-    }
+    } 
   ]
 }
