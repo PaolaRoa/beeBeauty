@@ -97,28 +97,8 @@
         "price":6000,
         "img":"../images/lips2.png",
         "quantity":1
-      },
-      {"id":"999",
-        "name":"labialprueba",
-        "description":"estamos probando",
-        "price":100000,
-        "img":"../images/pruebalabial2.jpg",
-        "quantity":1
       }
     ] 
-    },
-     {
-      "cname":"nueva categoria",
-      "items":[
-        {
-          "id":"M020",
-          "name":"Pestañina llama",
-          "description":"Pestañina de llama trendy",
-          "price":15000,
-          "img":"../images/eyes1.png",
-          "quantity":1
-        }
-      ] 
     },
     {
       "cname":"Pestañas y cejas",
