@@ -26,7 +26,7 @@ const Cart = () => {
     //function tha builds the whatsapp url
     const waString=()=>{
         if(total=== undefined || total=== 0){
-            return 'https://wa.me/573052946927?'
+            return 'https://wa.me/573229779341?'
         }
         let str = '';
         //for every item in the order creates a string and adds thas string to str
