@@ -37,7 +37,7 @@ const Cart = () => {
         }   
         )
         //add the string to whatsapp url
-        let waRawUrl = `https://wa.me/573052946927?text=${str}`
+        let waRawUrl = `https://wa.me/573229779341?text=${str}`
         //replaces all spaces for %20 that is a space in 
         waRawUrl=  waRawUrl.replace(/ /g, '%20');
        ;
@@ -46,7 +46,7 @@ const Cart = () => {
         //returns the url 
         return whatsappMessage;   
     }
-    //creates the button to go back home, this btn is sending by props to footer component
+    //creates the button to go back home, this btn is sended by props to footer component
     const btn = 
         <Link to='/home'>
             <button  type="button" className= 'backBtn'>
